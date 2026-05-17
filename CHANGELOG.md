@@ -1,5 +1,11 @@
 # @resolid/utils
 
+## 1.3.8
+
+### Patch Changes
+
+- feat: add retry util ([`395d369`](https://github.com/resolid/utils/commit/395d369e6ac5f7ca3c2523d53f86da7e78256b8a))
+
 ## 1.3.7
 
 ### Patch Changes
