@@ -19,6 +19,43 @@ export function sleep(ms: number): Promise<void> {
 }
 
 /**
+ * 以固定间隔重试异步操作，直到满足条件或超时
+ *
+ * @param fn - 要重试的异步函数，接收当前尝试次数（从 0 开始）
+ * @param predicate - 判断结果是否满足条件，返回 true 则停止重试
+ * @param interval - 每次重试之间的间隔时间（毫秒）
+ * @param onTimeout - 超时后的回调，其返回值作为最终结果
+ * @param timeoutMs - 最大等待时间（毫秒）
+ * @returns 满足条件的结果，或超时后 onTimeout 的返回值
+ */
+export async function retry<T, U>(
+  fn: (attempt: number) => Promise<T>,
+  predicate: (result: T) => boolean | Promise<boolean>,
+  interval: number,
+  onTimeout: () => U,
+  timeoutMs: number,
+): Promise<T | U> {
+  const startTime = Date.now();
+
+  let attemptNumber = 0;
+  let result = await fn(attemptNumber++);
+
+  // oxlint-disable-next-line no-await-in-loop
+  while (!(await predicate(result))) {
+    if (Date.now() - startTime >= timeoutMs) {
+      return onTimeout();
+    }
+    // oxlint-disable-next-line no-await-in-loop
+    await sleep(interval);
+
+    // oxlint-disable-next-line no-await-in-loop
+    result = await fn(attemptNumber++);
+  }
+
+  return result;
+}
+
+/**
  * 创建一个始终返回固定值的函数。
  *
  * @param value - 要固定返回的值
