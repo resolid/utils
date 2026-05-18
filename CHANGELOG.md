@@ -1,5 +1,11 @@
 # @resolid/utils
 
+## 1.4.0
+
+### Minor Changes
+
+- feat: add sleep, retry, abortable, and timeout async utilities ([`22e6c13`](https://github.com/resolid/utils/commit/22e6c136d312fc18cc87b3ad8ea4c55070bcaa6c))
+
 ## 1.3.8
 
 ### Patch Changes
