@@ -177,3 +177,13 @@ export function isEmpty(value: unknown): boolean {
 export function isPromise(value: unknown): value is Promise<unknown> {
   return value instanceof Promise;
 }
+
+/**
+ * 判断一个值是否为 ArrayBuffer 对象。
+ *
+ * @param value - 要判断的值
+ * @returns 如果值是 ArrayBuffer 对象则返回 true，否则返回 false
+ */
+export function isArrayBuffer(value: unknown): value is ArrayBuffer {
+  return value instanceof ArrayBuffer;
+}

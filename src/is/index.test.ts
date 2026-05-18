@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  isArrayBuffer,
   isBigInt,
   isBoolean,
   isDate,
@@ -218,6 +219,21 @@ describe("Type Checking Utilities", () => {
       expect(isPromise(42)).toBe(false);
       // oxlint-disable-next-line unicorn/no-thenable
       expect(isPromise({ then: () => {} })).toBe(false);
+    });
+  });
+
+  describe("isArrayBuffer", () => {
+    it("should return true for ArrayBuffer", () => {
+      expect(isArrayBuffer(new ArrayBuffer(8))).toBe(true);
+    });
+
+    it("should return false for non-ArrayBuffer values", () => {
+      expect(isArrayBuffer(null)).toBe(false);
+      expect(isArrayBuffer("")).toBe(false);
+      expect(isArrayBuffer(123)).toBe(false);
+      expect(isArrayBuffer({})).toBe(false);
+      expect(isArrayBuffer([])).toBe(false);
+      expect(isArrayBuffer(new Map())).toBe(false);
     });
   });
 });
