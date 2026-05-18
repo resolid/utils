@@ -1,6 +1,7 @@
 export * from "./array";
 export * from "./file";
 export * from "./function";
+export * from "./promise";
 export * from "./is";
 export * from "./number";
 export * from "./object";
