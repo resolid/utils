@@ -1,5 +1,5 @@
-import type { ValueOrFunction } from "../types";
 import { isFunction } from "../is";
+import { TimeoutError, type ValueOrFunction } from "../types";
 
 /**
  * 空函数（no operation）。
@@ -7,6 +7,34 @@ import { isFunction } from "../is";
  * 什么也不做，通常用于占位、默认回调或避免 undefined 调用。
  */
 export function noop(): void {}
+
+/**
+ * 将一个 Promise 包装为可中止的 Promise。
+ *
+ * @template T
+ * @param promise - 要包装的原始 Promise
+ * @param signal - 用于取消的 AbortSignal，不传则直接返回原始 Promise
+ * @returns 可中止的 Promise
+ */
+export function abortable<T>(promise: Promise<T>, signal?: AbortSignal): Promise<T> {
+  if (!signal) {
+    return promise;
+  }
+
+  signal.throwIfAborted();
+
+  return new Promise<T>((resolve, reject) => {
+    const handleAbort = () => reject(signal.reason);
+
+    signal.addEventListener("abort", handleAbort, {
+      once: true,
+    });
+
+    promise.then(resolve, reject).finally(() => {
+      signal.removeEventListener("abort", handleAbort);
+    });
+  });
+}
 
 /**
  * 异步等待指定毫秒数。
@@ -19,40 +47,83 @@ export function sleep(ms: number): Promise<void> {
 }
 
 /**
- * 以固定间隔重试异步操作，直到满足条件或超时
+ * 为 Promise 添加超时限制。
  *
- * @param fn - 要重试的异步函数，接收当前尝试次数（从 0 开始）
- * @param predicate - 判断结果是否满足条件，返回 true 则停止重试
- * @param interval - 每次重试之间的间隔时间（毫秒）
- * @param onTimeout - 超时后的回调，其返回值作为最终结果
- * @param timeoutMs - 最大等待时间（毫秒）
- * @returns 满足条件的结果，或超时后 onTimeout 的返回值
+ * @template T
+ * @param ms - 超时时间（毫秒）
+ * @param error - 超时时抛出的错误
+ * @returns 永远不会 resolve 的 Promise
  */
-export async function retry<T, U>(
+export function timeout<T extends Error>(ms: number, error?: string | (() => T)): Promise<never> {
+  return new Promise((_, reject) =>
+    setTimeout(() => reject(isFunction(error) ? error() : new TimeoutError(error)), ms),
+  );
+}
+
+export type RetryOptions = {
+  /**
+   * 重试之间的延迟, 固定数值（毫秒）或者根据当前尝试次数动态计算延迟的函数
+   * @default 0
+   */
+  delay?: number | ((attempts: number) => number);
+
+  /**
+   * 重试的次数
+   * @default Infinity
+   */
+  retries?: number;
+
+  /**
+   * 用于取消的 AbortSignal
+   */
+  signal?: AbortSignal;
+
+  /**
+   * 该函数根据错误类型和尝试次数来判断是否重试。如果未提供此函数，则所有错误都会触发重试。
+   *
+   * @param {unknown} error - 发生的错误
+   * @param {number} attempt - 当前尝试次数（从 0 开始计数）
+   * @returns {boolean | Promise<boolean>} 是否重试
+   */
+  shouldRetry?: (error: unknown, attempt: number) => boolean | Promise<boolean>;
+};
+
+/**
+ * 重试异步操作，直到成功或超时。
+ *
+ * @template T
+ * @param fn - 要重试的异步函数
+ * @param options - 重试次数或选项对象
+ * @returns 运行成功的结果
+ */
+export async function retry<T>(
   fn: (attempt: number) => Promise<T>,
-  predicate: (result: T) => boolean | Promise<boolean>,
-  interval: number,
-  onTimeout: () => U,
-  timeoutMs: number,
-): Promise<T | U> {
-  const startTime = Date.now();
+  options?: number | RetryOptions,
+): Promise<T> {
+  const opts: RetryOptions = typeof options === "number" ? { retries: options } : (options ?? {});
 
-  let attemptNumber = 0;
-  let result = await fn(attemptNumber++);
+  const { delay = 0, retries = Infinity, signal, shouldRetry = () => true } = opts;
 
-  // oxlint-disable-next-line no-await-in-loop
-  while (!(await predicate(result))) {
-    if (Date.now() - startTime >= timeoutMs) {
-      return onTimeout();
+  const getDelay = typeof delay === "function" ? delay : () => delay;
+
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    signal?.throwIfAborted();
+
+    try {
+      // oxlint-disable-next-line no-await-in-loop
+      return await fn(attempt);
+    } catch (e) {
+      // oxlint-disable-next-line no-await-in-loop
+      if (attempt >= retries || !(await shouldRetry(e, attempt))) {
+        throw e;
+      }
+
+      // oxlint-disable-next-line no-await-in-loop
+      await abortable(sleep(getDelay(attempt)), signal);
     }
-    // oxlint-disable-next-line no-await-in-loop
-    await sleep(interval);
-
-    // oxlint-disable-next-line no-await-in-loop
-    result = await fn(attemptNumber++);
   }
 
-  return result;
+  throw new Error("Unreachable");
 }
 
 /**
@@ -114,8 +185,8 @@ export function callAll<
   T extends (...args: any[]) => void,
 >(...fns: (T | null | undefined)[]) {
   return (...args: Parameters<T>): void => {
-    fns.forEach((fn) => {
+    for (const fn of fns) {
       fn?.(...args);
-    });
+    }
   };
 }
