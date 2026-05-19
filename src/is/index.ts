@@ -115,7 +115,7 @@ export function isFunction(value: unknown): value is Function {
  * @returns 如果值是 Date 对象则返回 true，否则返回 false
  */
 export function isDate(value: unknown): value is Date {
-  return value instanceof Date || Object.prototype.toString.call(value) === "[object Date]";
+  return value instanceof Date;
 }
 
 /**
