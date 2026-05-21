@@ -1,4 +1,3 @@
-import { isFunction } from "../is";
 import { TimeoutError } from "../types";
 
 /**
@@ -14,18 +13,27 @@ export function abortable<T>(promise: Promise<T>, signal?: AbortSignal): Promise
     return promise;
   }
 
-  signal.throwIfAborted();
+  if (signal.aborted) {
+    return Promise.reject(signal.reason);
+  }
 
   return new Promise<T>((resolve, reject) => {
-    const handleAbort = () => reject(signal.reason);
+    const onAbort = () => reject(signal.reason);
 
-    signal.addEventListener("abort", handleAbort, {
+    signal.addEventListener("abort", onAbort, {
       once: true,
     });
 
-    promise.then(resolve, reject).finally(() => {
-      signal.removeEventListener("abort", handleAbort);
-    });
+    promise.then(
+      (value) => {
+        signal.removeEventListener("abort", onAbort);
+        resolve(value);
+      },
+      (err) => {
+        signal.removeEventListener("abort", onAbort);
+        reject(err);
+      },
+    );
   });
 }
 
@@ -33,24 +41,27 @@ export function abortable<T>(promise: Promise<T>, signal?: AbortSignal): Promise
  * 异步等待指定毫秒数。
  *
  * @param ms - 要等待的毫秒数
+ * @param signal - 可选的 AbortSignal，用于提前取消
  * @returns 一个在指定时间后 resolve 的 Promise
  */
-export function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+export function sleep(ms: number, signal?: AbortSignal): Promise<void> {
+  if (signal?.aborted) {
+    return Promise.reject(signal.reason);
+  }
 
-/**
- * 为 Promise 添加超时限制。
- *
- * @template T
- * @param ms - 超时时间（毫秒）
- * @param error - 超时时抛出的错误
- * @returns 永远不会 resolve 的 Promise
- */
-export function timeout<T extends Error>(ms: number, error?: string | (() => T)): Promise<never> {
-  return new Promise((_, reject) =>
-    setTimeout(() => reject(isFunction(error) ? error() : new TimeoutError(error)), ms),
-  );
+  return new Promise((resolve, reject) => {
+    const onAbort = () => {
+      clearTimeout(timer);
+      reject(signal!.reason);
+    };
+
+    const timer = setTimeout(() => {
+      signal?.removeEventListener("abort", onAbort);
+      resolve();
+    }, ms);
+
+    signal?.addEventListener("abort", onAbort, { once: true });
+  });
 }
 
 export type RetryOptions = {
@@ -112,11 +123,56 @@ export async function retry<T>(
       }
 
       // oxlint-disable-next-line no-await-in-loop
-      await abortable(sleep(getDelay(attempt)), signal);
+      await sleep(getDelay(attempt), signal);
     }
   }
 
+  /* istanbul ignore next -- @preserve */
   throw new Error("Unreachable");
+}
+
+/**
+ * 为 Promise 添加超时和取消支持
+ *
+ * @param promise - 需要包装的原始 Promise
+ * @param ms - 超时时间（毫秒），超时后将 reject TimeoutError
+ * @param signal - 可选的 AbortSignal，用于提前取消
+ * @returns 包装后的 Promise
+ */
+export function withTimeout<T>(promise: Promise<T>, ms: number, signal?: AbortSignal): Promise<T> {
+  if (signal?.aborted) {
+    return Promise.reject(signal.reason);
+  }
+
+  return new Promise<T>((resolve, reject) => {
+    const timer = setTimeout(() => {
+      cleanup();
+      reject(new TimeoutError());
+    }, ms);
+
+    const onAbort = () => {
+      cleanup();
+      reject(signal!.reason);
+    };
+
+    const cleanup = () => {
+      clearTimeout(timer);
+      signal?.removeEventListener("abort", onAbort);
+    };
+
+    signal?.addEventListener("abort", onAbort, { once: true });
+
+    promise.then(
+      (value) => {
+        cleanup();
+        resolve(value);
+      },
+      (err) => {
+        cleanup();
+        reject(err);
+      },
+    );
+  });
 }
 
 /**

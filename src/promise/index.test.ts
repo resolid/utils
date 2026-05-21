@@ -1,6 +1,6 @@
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { TimeoutError } from "../types";
-import { abortable, retry, sleep, timeout, to } from "./index";
+import { abortable, retry, sleep, to, withTimeout } from "./index";
 
 describe("abortable", () => {
   it("should return original promise when signal is not provided", () => {
@@ -27,7 +27,9 @@ describe("abortable", () => {
     const controller = new AbortController();
     controller.abort();
 
-    expect(() => abortable(new Promise<never>(() => {}), controller.signal)).toThrow(DOMException);
+    await expect(() => abortable(new Promise<never>(() => {}), controller.signal)).rejects.toThrow(
+      "aborted",
+    );
   });
 
   it("should reject with custom reason when signal aborts", async () => {
@@ -49,7 +51,7 @@ describe("abortable", () => {
     const result = abortable(promise, controller.signal);
     controller.abort();
 
-    await expect(result).rejects.toThrow(DOMException);
+    await expect(result).rejects.toThrow("aborted");
   });
 
   it("should remove abort listener after promise rejects", async () => {
@@ -68,28 +70,119 @@ describe("sleep", () => {
     await sleep(50);
     expect(Date.now() - start).toBeGreaterThanOrEqual(50);
   });
+
+  it("should aborts via signal", async () => {
+    const ac = new AbortController();
+    setTimeout(() => ac.abort(new Error("stop")), 5);
+    await expect(sleep(100, ac.signal)).rejects.toThrow("stop");
+  });
+
+  it("should rejects immediately if already aborted", async () => {
+    const ac = new AbortController();
+    ac.abort();
+    await expect(sleep(100, ac.signal)).rejects.toThrow();
+  });
 });
 
-describe("timeout", () => {
-  it("should rejects after a specified number of milliseconds", async () => {
-    await expect(timeout(50)).rejects.toThrow(TimeoutError);
+describe("withTimeout", () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
   });
 
-  it("should rejects with a custom error message", async () => {
-    await expect(timeout(50, "too slow")).rejects.toThrow(new TimeoutError("too slow"));
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
-  it("should rejects with a custom error function", async () => {
-    class CustomError extends Error {}
-    await expect(timeout(10, () => new CustomError())).rejects.toThrow(CustomError);
+  it("should resolve with the original value before timeout", async () => {
+    expect(await withTimeout(Promise.resolve(42), 1000)).toBe(42);
   });
 
-  it("should resolves correctly when sleep finishes before timeout", async () => {
-    await expect(Promise.race([sleep(10), timeout(100)])).resolves.toBeUndefined();
+  it("should resolve even when ms is very small if promise is already settled", async () => {
+    expect(await withTimeout(Promise.resolve("done"), 1)).toBe("done");
   });
 
-  it("should rejects with timeout when it finishes before sleep", async () => {
-    await expect(Promise.race([sleep(100), timeout(10)])).rejects.toThrow();
+  it("should reject with the original error if promise rejects before timeout", async () => {
+    await expect(withTimeout(Promise.reject(new Error("original")), 1000)).rejects.toThrow(
+      "original",
+    );
+  });
+
+  it("should reject with TimeoutError when timeout fires first", async () => {
+    const result = withTimeout(new Promise(() => {}), 500);
+
+    vi.advanceTimersByTime(500);
+
+    await expect(result).rejects.toBeInstanceOf(TimeoutError);
+  });
+
+  it("should not reject with TimeoutError if promise resolves before timeout", async () => {
+    let resolve!: (v: number) => void;
+    const promise: Promise<number> = new Promise((res) => (resolve = res));
+    const result = withTimeout(promise, 1000);
+
+    resolve(99);
+    await Promise.resolve();
+    vi.advanceTimersByTime(1000);
+
+    await expect(result).resolves.toBe(99);
+  });
+
+  it("should reject immediately if signal is already aborted", async () => {
+    const controller = new AbortController();
+    controller.abort();
+
+    await expect(withTimeout(new Promise(() => {}), 1000, controller.signal)).rejects.toThrow(
+      "aborted",
+    );
+  });
+
+  it("should reject with AbortError when signal is aborted during wait", async () => {
+    const controller = new AbortController();
+    const result = withTimeout(new Promise(() => {}), 1000, controller.signal);
+
+    controller.abort();
+
+    await expect(result).rejects.toThrow("aborted");
+  });
+
+  it("should reject with signal.reason if reason is provided", async () => {
+    const controller = new AbortController();
+    const reason = new Error("custom abort reason");
+    const promise: Promise<never> = new Promise(() => {});
+    const result = withTimeout(promise, 1000, controller.signal);
+
+    controller.abort(reason);
+
+    await expect(result).rejects.toThrow("custom abort reason");
+  });
+
+  it("should not reject with TimeoutError if aborted before timeout fires", async () => {
+    const controller = new AbortController();
+    const result = withTimeout(new Promise(() => {}), 1000, controller.signal);
+
+    controller.abort();
+
+    vi.advanceTimersByTime(1000);
+
+    await expect(result).rejects.toThrow("aborted");
+    await expect(result).rejects.not.toBeInstanceOf(TimeoutError);
+  });
+
+  it("should clear the timer after promise resolves", async () => {
+    const clearTimeoutSpy = vi.spyOn(globalThis, "clearTimeout");
+
+    await withTimeout(Promise.resolve(1), 1000);
+
+    expect(clearTimeoutSpy).toHaveBeenCalled();
+  });
+
+  it("should remove abort listener after promise resolves", async () => {
+    const controller = new AbortController();
+    const removeListenerSpy = vi.spyOn(controller.signal, "removeEventListener");
+
+    await withTimeout(Promise.resolve(1), 1000, controller.signal);
+
+    expect(removeListenerSpy).toHaveBeenCalledWith("abort", expect.any(Function));
   });
 });
 
