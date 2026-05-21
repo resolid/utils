@@ -3,3 +3,5 @@ overrides:
 engineStrict: true
 allowBuilds:
   lefthook: true
+minimumReleaseAgeExclude:
+  - '@resolid/config'

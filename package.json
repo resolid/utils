@@ -51,14 +51,14 @@
     "@changesets/cli": "^2.31.0",
     "@commitlint/cli": "^21.0.1",
     "@commitlint/config-conventional": "^21.0.1",
-    "@resolid/config": "^5.3.16",
+    "@resolid/config": "^5.3.17",
     "@svitejs/changesets-changelog-github-compact": "^1.2.0",
     "@types/node": "^24.12.4",
     "@vitest/coverage-v8": "^4.1.6",
-    "lefthook": "^2.1.6",
-    "oxfmt": "^0.50.0",
-    "oxlint": "^1.65.0",
-    "oxlint-tsgolint": "^0.22.1",
+    "lefthook": "^2.1.8",
+    "oxfmt": "^0.51.0",
+    "oxlint": "^1.66.0",
+    "oxlint-tsgolint": "^0.23.0",
     "tsdown": "^0.22.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.6"
@@ -66,5 +66,5 @@
   "engines": {
     "node": "^22.13.0 || >=24"
   },
-  "packageManager": "pnpm@11.1.2"
+  "packageManager": "pnpm@11.1.3"
 }
