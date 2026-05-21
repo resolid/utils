@@ -1,3 +1,5 @@
+import type { MaybeArray } from "../types";
+
 /**
  * 将任意值转换为数组形式
  *
@@ -7,7 +9,7 @@
  * @param input - 单个值或数组
  * @returns 始终返回一个数组
  */
-export function asArray<T>(input: T | T[]): T[] {
+export function asArray<T>(input: MaybeArray<T>): T[] {
   return Array.isArray(input) ? input : [input];
 }
 
