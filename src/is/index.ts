@@ -118,6 +118,23 @@ export function isObject(value: unknown): value is Record<string, unknown> {
 }
 
 /**
+ * 判断一个值是否为纯对象（plain object）
+ * 纯对象是指通过对象字面量 `{}`、`Object.create(null)` 或 `new Object()` 创建的对象
+ *
+ * @param value - 要判断的值
+ * @returns 如果值是纯对象则返回 true
+ */
+export function isPlainObject(value: unknown): value is object {
+  if (typeof value !== "object" || value === null) {
+    return false;
+  }
+
+  const proto = Object.getPrototypeOf(value);
+
+  return proto === Object.prototype || proto === null || Object.getPrototypeOf(proto) === null;
+}
+
+/**
  * 判断一个值是否为函数类型。
  *
  * @param value - 要判断的值

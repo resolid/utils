@@ -11,6 +11,7 @@ import {
   isNullish,
   isNumber,
   isObject,
+  isPlainObject,
   isPromise,
   isString,
   isTruthy,
@@ -122,6 +123,61 @@ describe("Type Checking Utilities", () => {
       expect(isObject(null)).toBe(false);
       expect(isObject(42)).toBe(false);
       expect(isObject("obj")).toBe(false);
+    });
+  });
+
+  describe("isPlainObject", () => {
+    it("returns true for object literal", () => {
+      expect(isPlainObject({})).toBe(true);
+    });
+
+    it("returns true for object with properties", () => {
+      expect(isPlainObject({ a: 1, b: "2" })).toBe(true);
+    });
+
+    it("returns true for Object.create(null)", () => {
+      expect(isPlainObject(Object.create(null))).toBe(true);
+    });
+
+    it("returns false for null", () => {
+      expect(isPlainObject(null)).toBe(false);
+    });
+
+    it("returns false for undefined", () => {
+      expect(isPlainObject(undefined)).toBe(false);
+    });
+
+    it("returns false for array", () => {
+      expect(isPlainObject([])).toBe(false);
+    });
+
+    it("returns false for class instance", () => {
+      class Foo {}
+      expect(isPlainObject(new Foo())).toBe(false);
+    });
+
+    it("returns false for function", () => {
+      expect(isPlainObject(() => {})).toBe(false);
+    });
+
+    it("returns false for number", () => {
+      expect(isPlainObject(1)).toBe(false);
+    });
+
+    it("returns false for string", () => {
+      expect(isPlainObject("foo")).toBe(false);
+    });
+
+    it("returns false for Date", () => {
+      expect(isPlainObject(new Date())).toBe(false);
+    });
+
+    it("returns false for Map", () => {
+      expect(isPlainObject(new Map())).toBe(false);
+    });
+
+    it("returns false for Set", () => {
+      expect(isPlainObject(new Set())).toBe(false);
     });
   });
 
