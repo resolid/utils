@@ -1,4 +1,5 @@
 import { deviceLocale } from "../../device";
+import { isUndefined } from "../../is";
 import { daysInMonth } from "./days-in-month";
 import { formatDayPeriod } from "./format-day-period";
 import { toDate } from "./to-date";
@@ -78,7 +79,7 @@ export function parseDate(
         end++;
       }
       len = end - pos;
-    } else if (fixed !== undefined) {
+    } else if (!isUndefined(fixed)) {
       len = fixed;
     } else if (next) {
       if (next.type === "literal") {

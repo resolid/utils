@@ -1,3 +1,4 @@
+import { isFunction, isNumber } from "../is";
 import { TimeoutError } from "../types";
 
 /**
@@ -104,11 +105,11 @@ export async function retry<T>(
   fn: (attempt: number) => Promise<T>,
   options?: number | RetryOptions,
 ): Promise<T> {
-  const opts: RetryOptions = typeof options === "number" ? { retries: options } : (options ?? {});
+  const opts: RetryOptions = isNumber(options) ? { retries: options } : (options ?? {});
 
   const { delay = 0, retries = Infinity, signal, shouldRetry = () => true } = opts;
 
-  const getDelay = typeof delay === "function" ? delay : () => delay;
+  const getDelay = isFunction(delay) ? delay : () => delay;
 
   for (let attempt = 0; attempt <= retries; attempt++) {
     signal?.throwIfAborted();

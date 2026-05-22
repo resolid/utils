@@ -1,4 +1,5 @@
 import type { MaybeArray } from "../types";
+import { isArray } from "../is";
 
 /**
  * 将任意值转换为数组形式
@@ -10,7 +11,7 @@ import type { MaybeArray } from "../types";
  * @returns 始终返回一个数组
  */
 export function asArray<T>(input: MaybeArray<T>): T[] {
-  return Array.isArray(input) ? input : [input];
+  return isArray(input) ? input : [input];
 }
 
 /**

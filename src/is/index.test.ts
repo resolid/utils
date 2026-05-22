@@ -7,6 +7,7 @@ import {
   isDefined,
   isEmpty,
   isFunction,
+  isNull,
   isNullish,
   isNumber,
   isObject,
@@ -44,6 +45,18 @@ describe("Type Checking Utilities", () => {
       expect(isUndefined(null)).toBe(false);
       expect(isUndefined(0)).toBe(false);
       expect(isUndefined("")).toBe(false);
+    });
+  });
+
+  describe("isNull", () => {
+    it("should return true for null", () => {
+      expect(isNull(null)).toBe(true);
+    });
+
+    it("should return false for other values", () => {
+      expect(isNull(undefined)).toBe(false);
+      expect(isNull(0)).toBe(false);
+      expect(isNull("")).toBe(false);
     });
   });
 

@@ -1,3 +1,5 @@
+import { isNullish, isUndefined } from "../is";
+
 /**
  * 创建一个新对象，排除指定的键。
  *
@@ -119,7 +121,7 @@ export function get<T = unknown>(
   let current: any = value;
 
   for (const rawKey of segments) {
-    if (current == null) {
+    if (isNullish(current)) {
       return defaultValue as T;
     }
 
@@ -128,7 +130,7 @@ export function get<T = unknown>(
     current = current[key];
   }
 
-  if (current === undefined) {
+  if (isUndefined(current)) {
     return defaultValue as T;
   }
 

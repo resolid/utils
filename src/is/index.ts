@@ -38,13 +38,33 @@ export function isUndefined(value: unknown): value is undefined {
 }
 
 /**
+ * 判断一个值是否为 `null`。
+ *
+ * @param value - 要判断的值
+ * @returns 如果值为 `null`，返回 true，否则返回 false
+ */
+export function isNull(value: unknown): value is null {
+  return value === null;
+}
+
+/**
+ * 判断一个值是否为 `undefined` 或 `null`（即“nullish”）。
+ *
+ * @param value - 要判断的值
+ * @returns 如果值是 `undefined` 或 `null`，则返回 true，否则返回 false
+ */
+export function isNullish(value: unknown): value is null | undefined {
+  return isUndefined(value) || isNull(value);
+}
+
+/**
  * 判断一个值是否已定义（即不为 `undefined` 或 `null`）。
  *
  * @param value - 要判断的值
  * @returns 如果值既不是 `undefined` 也不是 `null`，则返回 true
  */
 export function isDefined<T>(value: T | undefined | null): value is T {
-  return value !== undefined && value !== null;
+  return !isNullish(value);
 }
 
 /**
@@ -76,6 +96,16 @@ export function isNumber(value: unknown): value is number {
 export function isString(value: unknown): value is string {
   return typeof value === "string";
 }
+/**
+ * 判断一个值是否为数组类型。
+ *
+ * @param value - 要判断的值
+ * @returns 如果值是数组则返回 true，否则返回 false
+ */
+// oxlint-disable-next-line typescript/no-explicit-any
+export function isArray(value: unknown): value is any[] {
+  return Array.isArray(value);
+}
 
 /**
  * 判断一个值是否为对象类型（排除 null）。
@@ -84,17 +114,7 @@ export function isString(value: unknown): value is string {
  * @returns 如果值是对象（且不为 null）则返回 true，否则返回 false
  */
 export function isObject(value: unknown): value is Record<string, unknown> {
-  return value !== null && typeof value === "object";
-}
-
-/**
- * 判断一个值是否为 `undefined` 或 `null`（即“nullish”）。
- *
- * @param value - 要判断的值
- * @returns 如果值是 `undefined` 或 `null`，则返回 true，否则返回 false
- */
-export function isNullish(value: unknown): value is null | undefined {
-  return value === undefined || value === null;
+  return isDefined(value) && typeof value === "object";
 }
 
 /**
@@ -155,7 +175,7 @@ export function isEmpty(value: unknown): boolean {
     return value.trim() == "";
   }
 
-  if (Array.isArray(value)) {
+  if (isArray(value)) {
     return value.length === 0;
   }
 
