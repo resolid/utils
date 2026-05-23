@@ -4,6 +4,7 @@ const config: UserConfig = defineConfig({
   entry: {
     index: "src/index.ts",
     date: "src/date/index.ts",
+    http: "src/http/index.ts",
   },
   format: "esm",
   target: "es2022",

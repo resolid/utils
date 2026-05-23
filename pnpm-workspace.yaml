@@ -5,3 +5,4 @@ allowBuilds:
   lefthook: true
 minimumReleaseAgeExclude:
   - '@resolid/config'
+  - srvx@0.11.16
