@@ -1,5 +1,27 @@
 # @resolid/utils
 
+## 1.5.0
+
+### Minor Changes
+
+- feat: add url and ufetch utils ([`df6d829`](https://github.com/resolid/utils/commit/df6d829178089d09e1da8fb9413c47236c45cdad))
+
+- feat: remove timeout and add withTimeout ([`ee50fe6`](https://github.com/resolid/utils/commit/ee50fe6f10df16765a182681142acb1bfae60761))
+
+### Patch Changes
+
+- feat: add isPlainObject utility function ([`805cb79`](https://github.com/resolid/utils/commit/805cb79233bb93b3d732a0b18bc168e4b1fea172))
+
+- refactor: simplify isDate implementation ([`6990126`](https://github.com/resolid/utils/commit/6990126978603a6fe27618906fc3bc32524f6b6f))
+
+- refactor: split promise to single file ([`8f7f1ac`](https://github.com/resolid/utils/commit/8f7f1acab0a2f25fd77bb5dfee9b0bd219b39b29))
+
+- refactor: replace inline type checks with utility functions ([`ce859ee`](https://github.com/resolid/utils/commit/ce859eedf9adf83722cb7af2ace8b8ff14a56178))
+
+- feat: add MaybeArray type ([`266116f`](https://github.com/resolid/utils/commit/266116f87c6a950781f0d169d1fc451f00202646))
+
+- feat: add isArrayBuffer function ([`f34bd85`](https://github.com/resolid/utils/commit/f34bd858fbab6a09c365389686c4a943b1bef688))
+
 ## 1.4.0
 
 ### Minor Changes
