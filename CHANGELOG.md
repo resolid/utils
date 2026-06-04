@@ -1,5 +1,11 @@
 # @resolid/utils
 
+## 1.6.0
+
+### Minor Changes
+
+- [`d5f01db`](https://github.com/resolid/utils/commit/d5f01db022d5d9840e1c7c3ef40867c45e405062) - refactor(fetch): simplify response handling and unify native mode behavior
+
 ## 1.5.0
 
 ### Minor Changes
