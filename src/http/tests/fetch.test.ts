@@ -257,6 +257,15 @@ describe("ufetch", () => {
     expect(body).to.deep.eq(message);
   });
 
+  it("should return Response when responseFormat is native", async () => {
+    const res = await ufetch(getUrl("ok"), {
+      responseFormat: "native",
+    });
+
+    expect(res).toBeInstanceOf(Response);
+    expect(await res.text()).toBe("ok");
+  });
+
   it("should send Node Readable body", async () => {
     const message = "Hallo von Pascal";
 

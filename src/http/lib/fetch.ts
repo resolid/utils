@@ -17,6 +17,7 @@ type ResponseFormats = {
   text: string;
   arrayBuffer: ArrayBuffer;
   stream: ReadableStream<Uint8Array>;
+  native: Response;
 };
 
 type ResponseFormat = keyof ResponseFormats | "json";
@@ -94,10 +95,6 @@ export type FetchInstance = {
     request: RequestInfo,
     options?: FetchOptions<R, T>,
   ): Promise<InferResponseFormat<R, T>>;
-  raw<T = unknown, R extends ResponseFormat = "json">(
-    request: RequestInfo,
-    options?: FetchOptions<R, T>,
-  ): Promise<FetchResponse<InferResponseFormat<R, T>>>;
   native: Fetch;
   create(defaults: FetchOptions, globalOptions?: CreateFetchOptions): FetchInstance;
 };
@@ -130,7 +127,7 @@ export function createFetch(globalOptions: CreateFetchOptions = {}): FetchInstan
     throw fetchError;
   };
 
-  const fetchRaw: FetchInstance["raw"] = async <T = unknown, R extends ResponseFormat = "json">(
+  const fetchRaw = async <T = unknown, R extends ResponseFormat = "json">(
     _request: RequestInfo,
     _options: FetchOptions<R, T> = {},
   ) => {
@@ -216,6 +213,11 @@ export function createFetch(globalOptions: CreateFetchOptions = {}): FetchInstan
         detectResponseFormat(response.headers.get("content-type") ?? "");
 
       switch (responseFormat) {
+        case "native": {
+          responseContext.response._data = undefined;
+          break;
+        }
+
         case "json": {
           const data = await response.text();
           if (data) {
@@ -253,10 +255,15 @@ export function createFetch(globalOptions: CreateFetchOptions = {}): FetchInstan
   };
 
   const fetchInstance = async function $fetch(request, options) {
-    return (await fetchRaw(request, options))._data;
+    const response = await fetchRaw(request, options);
+
+    if (options?.responseFormat == "native") {
+      return response;
+    }
+
+    return response._data;
   } as FetchInstance;
 
-  fetchInstance.raw = fetchRaw;
   fetchInstance.native = fetch;
   fetchInstance.create = (defaultOptions, customOptions = {}) =>
     createFetch({
@@ -294,7 +301,7 @@ function detectResponseFormat(contentTypeHeader = ""): ResponseFormat {
     return "json";
   }
 
-  const contentType = contentTypeHeader.split(";")[0] ?? "";
+  const contentType = contentTypeHeader.split(";")[0]?.trim().toLowerCase() ?? "";
 
   if (JSON_RE.test(contentType)) {
     return "json";
