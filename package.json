@@ -57,7 +57,7 @@
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
     "@resolid/config": "^5.3.23",
-    "@types/node": "^24.13.1",
+    "@types/node": "^24.13.2",
     "@vitest/coverage-v8": "^4.1.8",
     "lefthook": "^2.1.9",
     "oxfmt": "^0.54.0",
@@ -79,5 +79,5 @@
   "engines": {
     "node": "^22.13.0 || >=24"
   },
-  "packageManager": "pnpm@11.5.2"
+  "packageManager": "pnpm@11.6.0"
 }
