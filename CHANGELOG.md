@@ -1,5 +1,11 @@
 # @resolid/utils
 
+## 1.6.1
+
+### Patch Changes
+
+- [`205661f`](https://github.com/resolid/utils/commit/205661f5ff1f1534ef5c43951bdb3cfcdac99bb1) - feat: add MaybePromise and AtLeastOne utility types
+
 ## 1.6.0
 
 ### Minor Changes
