@@ -14,6 +14,7 @@ export function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// oxlint-disable-next-line prefer-named-capture-group
 const CAMEL_CASE_REGEX = /[-_\s]+(.)?/g;
 
 /**

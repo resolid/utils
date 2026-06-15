@@ -4,7 +4,7 @@ import { tokenValues } from "../lib/token-values";
 import { two } from "../lib/utils";
 
 function r<T>(length: number, fill: (index: number) => T): T[] {
-  return Array.from({ length: length })
+  return Array.from({ length })
     .fill("")
     .map((_x, i) => fill(i));
 }

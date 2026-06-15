@@ -56,7 +56,7 @@
     "@changesets/cli": "^2.31.0",
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
-    "@resolid/config": "^5.3.23",
+    "@resolid/config": "^5.3.24",
     "@types/node": "^24.13.2",
     "@vitest/coverage-v8": "^4.1.8",
     "lefthook": "^2.1.9",

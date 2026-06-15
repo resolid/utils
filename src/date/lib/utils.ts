@@ -401,6 +401,7 @@ export function secondsToOffset(ts: number, token: TimezoneToken = "Z"): string 
 export function offsetToSeconds(offset: string, token: TimezoneToken): number {
   validateOffset(offset, token);
   const [, sign, hours, minutes, seconds = "0"] = offset.match(
+    // oxlint-disable-next-line prefer-named-capture-group
     /([+-])([0-3][0-9]):?([0-5][0-9])(?::?([0-5][0-9]))?/,
   )!;
   const total = Number(hours) * 3600 + Number(minutes) * 60 + Number(seconds);

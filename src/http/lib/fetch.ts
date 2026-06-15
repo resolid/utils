@@ -96,7 +96,7 @@ export type FetchInstance = {
     options?: FetchOptions<R, T>,
   ): Promise<InferResponseFormat<R, T>>;
   native: Fetch;
-  create(defaults: FetchOptions, globalOptions?: CreateFetchOptions): FetchInstance;
+  create: (defaults: FetchOptions, globalOptions?: CreateFetchOptions) => FetchInstance;
 };
 
 const noBodyStatus = new Set([101, 204, 205, 304]);
@@ -294,6 +294,7 @@ const textMimeTypes = new Set([
   "text/html",
 ]);
 
+// oxlint-disable-next-line prefer-named-capture-group
 const JSON_RE = /^application\/(?:[\w!#$%&*.^`~-]*\+)?json(;.+)?$/i;
 
 function detectResponseFormat(contentTypeHeader = ""): ResponseFormat {

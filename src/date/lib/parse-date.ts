@@ -69,6 +69,7 @@ export function parseDate(
     const fixed = FIXED_LENGTH[token.value];
     const next = tokens[i + 1];
 
+    // oxlint-disable-next-line no-useless-assignment
     let len = 1;
 
     if (token.value === "Z" || token.value == "ZZ") {
