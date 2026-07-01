@@ -1,5 +1,11 @@
 # @resolid/utils
 
+## 1.6.2
+
+### Patch Changes
+
+- [`ecdb19a`](https://github.com/resolid/utils/commit/ecdb19ab859c7f362f4cf1f684156cf97fd91a4e) - fix: fix types
+
 ## 1.6.1
 
 ### Patch Changes
