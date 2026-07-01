@@ -14,5 +14,5 @@ export function deviceLocale(): string {
  * * 如果未设置环境变量 TZ，则可能返回 undefined
  */
 export function deviceTimezone(): string | undefined {
-  return Intl.DateTimeFormat().resolvedOptions().timeZone as string | undefined;
+  return Intl.DateTimeFormat().resolvedOptions().timeZone;
 }

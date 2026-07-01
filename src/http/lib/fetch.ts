@@ -111,8 +111,8 @@ export function createFetch(globalOptions: CreateFetchOptions = {}): FetchInstan
   ) => {
     const message = error?.message ?? error?.toString();
     const status = response ? `${response.status} ${response.statusText}` : "";
-    const method = ((ctx.request as Request).method || ctx.options.method) ?? "GET";
-    const url = (ctx.request as Request).url || String(ctx.request as string) || "/";
+    const method = isString(ctx.request) ? (ctx.options.method ?? "GET") : ctx.request.method;
+    const url = isString(ctx.request) ? ctx.request : ctx.request.url;
 
     const fetchError = new FetchError(
       `[${method}] ${JSON.stringify(url)}: ${status}${message ? ` ${message}` : ""}`,
