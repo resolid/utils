@@ -1,5 +1,11 @@
 # @resolid/utils
 
+## 1.6.3
+
+### Patch Changes
+
+- [`103734d`](https://github.com/resolid/utils/commit/103734d35032cb9ba0ee38b348f3205209c06ec3) - feat: fix lint error
+
 ## 1.6.2
 
 ### Patch Changes
