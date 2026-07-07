@@ -61,7 +61,7 @@ export function throttle<T extends unknown[]>(
             fn.cancel();
           }
         },
-        !middle ? wait : wait - delta,
+        middle ? wait - delta : wait,
       );
     }
   }

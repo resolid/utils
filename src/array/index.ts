@@ -56,7 +56,7 @@ export function insert<T>(input: T[], index: number, item: T): T[] {
 export function remove<T>(input: T[], item: T): boolean {
   const index = input.indexOf(item);
 
-  if (index < 0) {
+  if (index === -1) {
     return false;
   }
 

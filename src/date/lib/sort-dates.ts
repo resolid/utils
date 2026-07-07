@@ -13,8 +13,7 @@ export function sortDates(
   dates: (MaybeDateInput | undefined)[],
   order: "asc" | "desc" = "asc",
 ): DateInput[] {
-  return dates
-    .slice()
+  return [...dates]
     .filter((date): date is DateInput => date != null)
     .sort((a, b) => {
       if (isBefore(a, b)) {

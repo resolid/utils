@@ -12,8 +12,8 @@ import { toDate } from "./to-date";
  */
 export function clampDate(input: DateInput, min?: MaybeDateInput, max?: MaybeDateInput): Date {
   const date = toDate(input);
-  const minDate = min != null ? toDate(min) : null;
-  const maxDate = max != null ? toDate(max) : null;
+  const minDate = min == null ? null : toDate(min);
+  const maxDate = max == null ? null : toDate(max);
   const minTime = minDate ? minDate.getTime() : -Infinity;
   const maxTime = maxDate ? maxDate.getTime() : Infinity;
 

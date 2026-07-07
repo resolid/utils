@@ -46,9 +46,7 @@ describe("ufetch", () => {
           } else {
             const text = await request.text();
 
-            if (!text) {
-              body = undefined;
-            } else {
+            if (text) {
               if (contentType.startsWith("application/x-www-form-urlencoded")) {
                 body = parseQuery(text);
               } else {
@@ -61,6 +59,8 @@ describe("ufetch", () => {
                   });
                 }
               }
+            } else {
+              body = undefined;
             }
           }
 
@@ -175,12 +175,10 @@ describe("ufetch", () => {
 
     expect(body).to.deep.eq({ num: 42 });
 
-    const body2 = (
-      await ufetch<{ body: { num: number }[] }>(getUrl("post"), {
-        method: "POST",
-        body: [{ num: 42 }, { num: 43 }],
-      })
-    ).body;
+    const { body: body2 } = await ufetch<{ body: { num: number }[] }>(getUrl("post"), {
+      method: "POST",
+      body: [{ num: 42 }, { num: 43 }],
+    });
     expect(body2).to.deep.eq([{ num: 42 }, { num: 43 }]);
 
     let body3;
@@ -397,10 +395,11 @@ describe("ufetch", () => {
       "x-header-c": "3",
     });
 
-    const parseParams = (str: string) =>
-      Object.fromEntries(new URL(str, "http://_").searchParams.entries());
-
-    expect(parseParams(path)).toMatchObject({ a: "1", b: "2", c: "3" });
+    expect(Object.fromEntries(new URL(path, "http://_").searchParams.entries())).toMatchObject({
+      a: "1",
+      b: "2",
+      c: "3",
+    });
   });
 
   it("should preserve headers from Request instance", async () => {

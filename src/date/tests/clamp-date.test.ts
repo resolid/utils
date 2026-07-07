@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { clampDate } from "../lib/clamp-date";
 
-describe("clampDate", () => {
-  const d = (s: string) => new Date(s);
+const d = (s: string) => new Date(s);
 
+describe("clampDate", () => {
   it("returns min when date is before min", () => {
     expect(clampDate(d("2023-06-01"), d("2024-01-01"), d("2024-12-31"))).toEqual(d("2024-01-01"));
   });

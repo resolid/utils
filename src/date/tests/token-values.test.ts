@@ -22,9 +22,9 @@ describe("monthTokenValues", () => {
 
     const renderedMonthRanges: string[][] = [];
 
-    locales.forEach((locale) => {
+    for (const locale of locales) {
       renderedMonthRanges.push(localeData[locale]!.month.short.standalone);
-    });
+    }
 
     expect(monthRanges).toEqual(renderedMonthRanges);
   });
@@ -34,9 +34,9 @@ describe("monthTokenValues", () => {
 
     const renderedMonthRanges: string[][] = [];
 
-    locales.forEach((locale) => {
+    for (const locale of locales) {
       renderedMonthRanges.push(localeData[locale]!.month.long.format);
-    });
+    }
 
     expect(monthRanges).toEqual(renderedMonthRanges);
   });
@@ -199,7 +199,7 @@ describe("tokenValues", () => {
     const years = [];
 
     for (let i = -120; i < 120; i++) {
-      years.push(`${year + i}`.substring(2));
+      years.push(`${year + i}`.slice(2));
     }
     expect(tokenValues("YY")).toEqual(years);
   });

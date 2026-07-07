@@ -103,9 +103,9 @@ export function formatDate(
   const resolvedTimezone = timezone ?? deviceTimezone();
 
   const resolvedDate =
-    resolvedTimezone?.toUpperCase() !== "UTC"
-      ? removeOffset(date, computeOffset(date, resolvedTimezone, "UTC"))
-      : date;
+    resolvedTimezone?.toUpperCase() === "UTC"
+      ? date
+      : removeOffset(date, computeOffset(date, resolvedTimezone, "UTC"));
 
   const tokens = tokenizeFormat(format);
 
@@ -118,84 +118,107 @@ export function formatDate(
     }
 
     switch (token.value) {
-      case "YYYY":
+      case "YYYY": {
         parts.push(String(resolvedDate.getUTCFullYear()));
         break;
-      case "YY":
+      }
+      case "YY": {
         parts.push(two(resolvedDate.getUTCFullYear() % 100));
         break;
-      case "MMMM":
+      }
+      case "MMMM": {
         parts.push(formatPart(resolvedDate, "long", "month", locale, genitive));
         break;
-      case "MMM":
+      }
+      case "MMM": {
         parts.push(formatPart(resolvedDate, "short", "month", locale, genitive));
         break;
-      case "MM":
+      }
+      case "MM": {
         parts.push(two(resolvedDate.getUTCMonth() + 1));
         break;
-      case "M":
+      }
+      case "M": {
         parts.push(String(resolvedDate.getUTCMonth() + 1));
         break;
-      case "DD":
+      }
+      case "DD": {
         parts.push(two(resolvedDate.getUTCDate()));
         break;
-      case "D":
+      }
+      case "D": {
         parts.push(String(resolvedDate.getUTCDate()));
         break;
-      case "dddd":
+      }
+      case "dddd": {
         parts.push(formatPart(resolvedDate, "long", "weekday", locale, genitive));
         break;
-      case "ddd":
+      }
+      case "ddd": {
         parts.push(formatPart(resolvedDate, "short", "weekday", locale, genitive));
         break;
-      case "d":
+      }
+      case "d": {
         parts.push(formatPart(resolvedDate, "narrow", "weekday", locale, genitive));
         break;
-      case "HH":
+      }
+      case "HH": {
         parts.push(two(resolvedDate.getUTCHours()));
         break;
-      case "H":
+      }
+      case "H": {
         parts.push(String(resolvedDate.getUTCHours()));
         break;
-      case "hh":
+      }
+      case "hh": {
         parts.push(two(resolvedDate.getUTCHours() % 12 || 12));
         break;
-      case "h":
+      }
+      case "h": {
         parts.push(String(resolvedDate.getUTCHours() % 12 || 12));
         break;
-      case "mm":
+      }
+      case "mm": {
         parts.push(two(resolvedDate.getUTCMinutes()));
         break;
-      case "m":
+      }
+      case "m": {
         parts.push(String(resolvedDate.getUTCMinutes()));
         break;
-      case "ss":
+      }
+      case "ss": {
         parts.push(two(resolvedDate.getUTCSeconds()));
         break;
-      case "s":
+      }
+      case "s": {
         parts.push(String(resolvedDate.getUTCSeconds()));
         break;
-      case "SSS":
+      }
+      case "SSS": {
         parts.push(String(resolvedDate.getUTCMilliseconds()).padStart(3, "0"));
         break;
-      case "A":
+      }
+      case "A": {
         parts.push(
           formatDayPeriod(resolvedDate.getUTCHours() < 12 ? "am" : "pm", locale).toUpperCase(),
         );
         break;
-      case "a":
+      }
+      case "a": {
         parts.push(
           formatDayPeriod(resolvedDate.getUTCHours() < 12 ? "am" : "pm", locale).toLowerCase(),
         );
         break;
+      }
       case "Z":
-      case "ZZ":
+      case "ZZ": {
         parts.push(
           timezone
             ? computeOffset(date, "UTC", timezone, token.value)
             : secondsToOffset(-1 * resolvedDate.getTimezoneOffset() * 60, token.value),
         );
         break;
+      }
     }
   }
 

@@ -326,11 +326,11 @@ function resolveFetchOptions<R extends ResponseFormat = ResponseFormat, T = unkn
 ): ResolvedFetchOptions<R, T> {
   const headers = new Headers(defaults?.headers);
 
-  new Headers(input?.headers ?? (request instanceof Request ? request.headers : undefined)).forEach(
-    (v, k) => {
-      headers.set(k, v);
-    },
-  );
+  for (const [key, value] of new Headers(
+    input?.headers ?? (request instanceof Request ? request.headers : undefined),
+  )) {
+    headers.set(key, value);
+  }
 
   let query: QueryObject | undefined;
 
@@ -373,14 +373,17 @@ export function isJsonSerializable(body: unknown): boolean {
   switch (typeof body) {
     case "string":
     case "number":
-    case "boolean":
+    case "boolean": {
       return true;
+    }
 
-    case "object":
+    case "object": {
       break;
+    }
 
-    default:
+    default: {
       return false;
+    }
   }
 
   if (

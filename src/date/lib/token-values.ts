@@ -16,15 +16,12 @@ import { type FormatToken, two } from "./utils";
  * @returns token 所有可能值的字符串数组
  */
 export function tokenValues(token: FormatToken, locale = "en", genitive = false): string[] {
-  const generate = (count: number, getValue: (index: number) => string | number): string[] =>
-    Array.from({ length: count }, (_, i) => String(getValue(i)));
-
   if (token === "M") {
-    return generate(12, (i) => i + 1);
+    return generateTokens(12, (i) => i + 1);
   }
 
   if (token === "MM") {
-    return generate(12, (i) => two(i + 1));
+    return generateTokens(12, (i) => two(i + 1));
   }
 
   if (token.startsWith("M")) {
@@ -60,36 +57,42 @@ export function tokenValues(token: FormatToken, locale = "en", genitive = false)
   }
 
   if (token === "D") {
-    return generate(31, (i) => i + 1);
+    return generateTokens(31, (i) => i + 1);
   }
 
   if (token === "DD") {
-    return generate(31, (i) => two(i + 1));
+    return generateTokens(31, (i) => two(i + 1));
   }
 
   if (token === "H") {
-    return generate(24, (i) => i);
+    return generateTokens(24, (i) => i);
   }
+
   if (token === "HH") {
-    return generate(24, (i) => two(i));
+    return generateTokens(24, (i) => two(i));
   }
 
   if (token === "h") {
-    return generate(12, (i) => i + 1);
+    return generateTokens(12, (i) => i + 1);
   }
+
   if (token === "hh") {
-    return generate(12, (i) => two(i + 1));
+    return generateTokens(12, (i) => two(i + 1));
   }
 
   if (token === "m" || token === "s") {
-    return generate(60, (i) => i);
+    return generateTokens(60, (i) => i);
   }
 
   /* istanbul ignore next -- @preserve */
   if (token === "mm" || token === "ss") {
-    return generate(60, (i) => two(i));
+    return generateTokens(60, (i) => two(i));
   }
 
   /* istanbul ignore next -- @preserve */
   return [];
+}
+
+function generateTokens(count: number, getValue: (index: number) => string | number) {
+  return Array.from({ length: count }, (_, i) => String(getValue(i)));
 }

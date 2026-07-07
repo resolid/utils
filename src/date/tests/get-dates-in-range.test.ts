@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { getDatesInRange } from "../lib/get-dates-in-range";
 
-describe("getDatesInRange", () => {
-  const d = (s: string) => new Date(s);
+const d = (s: string) => new Date(s);
 
+describe("getDatesInRange", () => {
   it("returns all days between two dates (inclusive)", () => {
     expect(getDatesInRange(d("2024-01-01"), d("2024-01-05"))).toEqual([
       d("2024-01-01"),

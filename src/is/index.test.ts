@@ -33,7 +33,7 @@ describe("Type Checking Utilities", () => {
       expect(isTruthy("")).toBe(false);
       expect(isTruthy(null)).toBe(false);
       expect(isTruthy(undefined)).toBe(false);
-      expect(isTruthy(NaN)).toBe(false);
+      expect(isTruthy(Number.NaN)).toBe(false);
     });
   });
 
@@ -91,7 +91,7 @@ describe("Type Checking Utilities", () => {
     it("should return true for numbers", () => {
       expect(isNumber(0)).toBe(true);
       expect(isNumber(42)).toBe(true);
-      expect(isNumber(NaN)).toBe(true);
+      expect(isNumber(Number.NaN)).toBe(true);
     });
 
     it("should return false for non-numbers", () => {
@@ -221,13 +221,13 @@ describe("Type Checking Utilities", () => {
     it("returns true for bigint literals", () => {
       expect(isBigInt(0n)).toBe(true);
       expect(isBigInt(123n)).toBe(true);
-      expect(isBigInt(BigInt(999))).toBe(true);
+      expect(isBigInt(999n)).toBe(true);
     });
 
     it("returns false for numbers", () => {
       expect(isBigInt(0)).toBe(false);
       expect(isBigInt(123)).toBe(false);
-      expect(isBigInt(NaN)).toBe(false);
+      expect(isBigInt(Number.NaN)).toBe(false);
       expect(isBigInt(Infinity)).toBe(false);
     });
 
@@ -244,7 +244,7 @@ describe("Type Checking Utilities", () => {
       expect(isBigInt({})).toBe(false);
       expect(isBigInt([])).toBe(false);
       expect(isBigInt(new Date())).toBe(false);
-      expect(isBigInt(Object(1n))).toBe(false); // boxed BigInt object
+      expect(isBigInt(new Object(1n))).toBe(false); // boxed BigInt object
     });
 
     it("acts as a proper type guard", () => {

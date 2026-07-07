@@ -45,7 +45,7 @@ export function matchesAccept(fileName: string, mimeType: string, accept: string
   const accepts = accept.split(",").map((type) => type.trim());
 
   const parts = fileName.split(/[\\/]/);
-  const basename = parts[parts.length - 1]!;
+  const basename = parts.at(-1)!;
 
   const lastDotIndex = basename.lastIndexOf(".");
   const extension = lastDotIndex > 0 ? basename.slice(lastDotIndex + 1) : "";

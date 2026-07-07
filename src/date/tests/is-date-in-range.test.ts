@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { isDateInRange } from "../lib/is-date-in-range";
 
-describe("isDateInRange", () => {
-  const d = (s: string) => new Date(s);
+const d = (s: string) => new Date(s);
 
+describe("isDateInRange", () => {
   const range = {
     start: d("2024-01-01"),
     end: d("2024-12-31"),

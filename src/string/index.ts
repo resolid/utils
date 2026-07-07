@@ -113,7 +113,7 @@ export function endsWith(text: string, suffix: string, ignoreCase = true): boole
  */
 export function trimStart(text: string, prefix: string, ignoreCase = true): string {
   if (startsWith(text, prefix, ignoreCase)) {
-    return text.slice(prefix.length, text.length);
+    return text.slice(prefix.length);
   }
 
   return text;

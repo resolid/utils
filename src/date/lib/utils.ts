@@ -155,7 +155,7 @@ export function tokenizeFormat(format: string): PartToken[] {
     }
 
     switch (ch) {
-      case "Y":
+      case "Y": {
         flush();
 
         if (format[i + 1] === "Y" && format[i + 2] === "Y" && format[i + 3] === "Y") {
@@ -171,7 +171,8 @@ export function tokenizeFormat(format: string): PartToken[] {
         }
 
         break;
-      case "M":
+      }
+      case "M": {
         flush();
 
         if (format[i + 1] === "M" && format[i + 2] === "M" && format[i + 3] === "M") {
@@ -196,7 +197,8 @@ export function tokenizeFormat(format: string): PartToken[] {
         i += 1;
 
         continue;
-      case "D":
+      }
+      case "D": {
         flush();
 
         if (format[i + 1] === "D") {
@@ -208,8 +210,9 @@ export function tokenizeFormat(format: string): PartToken[] {
         tokens.push({ type: "field", value: "D" });
         i += 1;
         continue;
+      }
 
-      case "d":
+      case "d": {
         flush();
 
         if (format[i + 1] === "d" && format[i + 2] === "d" && format[i + 3] === "d") {
@@ -227,8 +230,9 @@ export function tokenizeFormat(format: string): PartToken[] {
         tokens.push({ type: "field", value: "d" });
         i += 1;
         continue;
+      }
 
-      case "H":
+      case "H": {
         flush();
 
         if (format[i + 1] === "H") {
@@ -240,8 +244,9 @@ export function tokenizeFormat(format: string): PartToken[] {
         tokens.push({ type: "field", value: "H" });
         i += 1;
         continue;
+      }
 
-      case "h":
+      case "h": {
         flush();
 
         if (format[i + 1] === "h") {
@@ -253,8 +258,9 @@ export function tokenizeFormat(format: string): PartToken[] {
         tokens.push({ type: "field", value: "h" });
         i += 1;
         continue;
+      }
 
-      case "m":
+      case "m": {
         flush();
 
         if (format[i + 1] === "m") {
@@ -266,8 +272,9 @@ export function tokenizeFormat(format: string): PartToken[] {
         tokens.push({ type: "field", value: "m" });
         i += 1;
         continue;
+      }
 
-      case "s":
+      case "s": {
         flush();
 
         if (format[i + 1] === "s") {
@@ -279,8 +286,9 @@ export function tokenizeFormat(format: string): PartToken[] {
         tokens.push({ type: "field", value: "s" });
         i += 1;
         continue;
+      }
 
-      case "S":
+      case "S": {
         flush();
         if (format[i + 1] === "S" && format[i + 2] === "S") {
           tokens.push({ type: "field", value: "SSS" });
@@ -288,16 +296,18 @@ export function tokenizeFormat(format: string): PartToken[] {
           continue;
         }
         break;
+      }
 
       case "A":
-      case "a":
+      case "a": {
         flush();
 
         tokens.push({ type: "field", value: ch });
         i++;
         continue;
+      }
 
-      case "Z":
+      case "Z": {
         flush();
 
         if (format[i + 1] === "Z") {
@@ -309,6 +319,7 @@ export function tokenizeFormat(format: string): PartToken[] {
         tokens.push({ type: "field", value: "Z" });
         i++;
         continue;
+      }
     }
 
     literalBuf += ch;
@@ -612,7 +623,7 @@ export function validateTokens(parts: PartToken[]): PartToken[] {
   let prev: PartToken | undefined;
 
   for (const part of parts) {
-    if (part.type === "literal" && !isNaN(parseFloat(part.value))) {
+    if (part.type === "literal" && !Number.isNaN(Number.parseFloat(part.value))) {
       throw new Error(`Numeric literal in format: "${part.value}"`);
     }
 

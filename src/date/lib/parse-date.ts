@@ -117,9 +117,10 @@ export function parseDate(
     }
 
     switch (token.value) {
-      case "YYYY":
+      case "YYYY": {
         values.year = Number(raw);
         break;
+      }
       case "YY": {
         const n = Number(raw);
         values.year = n >= 70 ? 1900 + n : 2000 + n;
@@ -135,38 +136,46 @@ export function parseDate(
         break;
       }
       case "MM":
-      case "M":
+      case "M": {
         values.month = Number(raw);
         break;
+      }
       case "DD":
-      case "D":
+      case "D": {
         values.day = Number(raw);
         break;
+      }
       case "HH":
       case "H":
       case "hh":
-      case "h":
+      case "h": {
         values.hour = Number(raw);
         break;
+      }
       case "mm":
-      case "m":
+      case "m": {
         values.minute = Number(raw);
         break;
+      }
       case "ss":
-      case "s":
+      case "s": {
         values.second = Number(raw);
         break;
-      case "SSS":
+      }
+      case "SSS": {
         values.millisecond = Number(raw);
         break;
+      }
       case "A":
-      case "a":
+      case "a": {
         a = raw.toLowerCase() === formatDayPeriod("am", resolvedLocale).toLowerCase();
         break;
+      }
       case "Z":
-      case "ZZ":
+      case "ZZ": {
         values.offset = validateOffset(raw, token.value);
         break;
+      }
     }
   }
 
@@ -209,7 +218,7 @@ export function parseDate(
   if (values.offset) {
     const d = new Date(`${year}-${month}-${day}T${hour}:${minute}:${second}.${millisecond}Z`);
 
-    if (!isFinite(+d)) {
+    if (!Number.isFinite(+d)) {
       return invalid(tokens.map((t) => t.value).join(""));
     }
 
@@ -223,7 +232,7 @@ export function parseDate(
 
   const d = new Date(`${year}-${month}-${day}T${hour}:${minute}:${second}.${millisecond}`);
 
-  if (isFinite(+d)) {
+  if (Number.isFinite(+d)) {
     return d;
   }
 
