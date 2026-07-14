@@ -1,5 +1,11 @@
 # @resolid/utils
 
+## 1.7.0
+
+### Minor Changes
+
+- [`f64163a`](https://github.com/resolid/utils/commit/f64163a0876bb610b79559dade6e9dc024e47f95) - feat: upgrade nanoid to v6
+
 ## 1.6.3
 
 ### Patch Changes
