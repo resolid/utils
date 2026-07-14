@@ -4,6 +4,12 @@ export type MaybeArray<T> = T | T[];
 
 export type MaybePromise<T> = T | Promise<T>;
 
+export type AnyObject = Record<string, unknown>;
+
+export type EmptyObject = Record<never, never>;
+
+export type Dict<V> = Record<string, V>;
+
 export type Simplify<T> = { [K in keyof T]: T[K] } & {};
 
 export type ValueOrFunction<T, A extends unknown[] = []> = T | ((...args: A) => T);
