@@ -1,71 +1,140 @@
 {
-  "zh": {
+  "es": {
     "month": {
       "long": {
         "standalone": [
-          "一月",
-          "二月",
-          "三月",
-          "四月",
-          "五月",
-          "六月",
-          "七月",
-          "八月",
-          "九月",
-          "十月",
-          "十一月",
-          "十二月"
+          "enero",
+          "febrero",
+          "marzo",
+          "abril",
+          "mayo",
+          "junio",
+          "julio",
+          "agosto",
+          "septiembre",
+          "octubre",
+          "noviembre",
+          "diciembre"
         ],
         "format": [
-          "一月",
-          "二月",
-          "三月",
-          "四月",
-          "五月",
-          "六月",
-          "七月",
-          "八月",
-          "九月",
-          "十月",
-          "十一月",
-          "十二月"
+          "enero",
+          "febrero",
+          "marzo",
+          "abril",
+          "mayo",
+          "junio",
+          "julio",
+          "agosto",
+          "septiembre",
+          "octubre",
+          "noviembre",
+          "diciembre"
         ]
       },
       "short": {
         "standalone": [
-          "1月",
-          "2月",
-          "3月",
-          "4月",
-          "5月",
-          "6月",
-          "7月",
-          "8月",
-          "9月",
-          "10月",
-          "11月",
-          "12月"
+          "ene",
+          "feb",
+          "mar",
+          "abr",
+          "may",
+          "jun",
+          "jul",
+          "ago",
+          "sept",
+          "oct",
+          "nov",
+          "dic"
         ],
         "format": [
-          "1月",
-          "2月",
-          "3月",
-          "4月",
-          "5月",
-          "6月",
-          "7月",
-          "8月",
-          "9月",
-          "10月",
-          "11月",
-          "12月"
+          "ene",
+          "feb",
+          "mar",
+          "abr",
+          "may",
+          "jun",
+          "jul",
+          "ago",
+          "sept",
+          "oct",
+          "nov",
+          "dic"
         ]
       }
     },
     "weekday": {
-      "long": ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
-      "short": ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
-      "narrow": ["日", "一", "二", "三", "四", "五", "六"]
+      "long": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
+      "short": ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"],
+      "narrow": ["D", "L", "M", "X", "J", "V", "S"]
+    }
+  },
+  "cs": {
+    "month": {
+      "long": {
+        "standalone": [
+          "leden",
+          "únor",
+          "březen",
+          "duben",
+          "květen",
+          "červen",
+          "červenec",
+          "srpen",
+          "září",
+          "říjen",
+          "listopad",
+          "prosinec"
+        ],
+        "format": [
+          "ledna",
+          "února",
+          "března",
+          "dubna",
+          "května",
+          "června",
+          "července",
+          "srpna",
+          "září",
+          "října",
+          "listopadu",
+          "prosince"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "led",
+          "úno",
+          "bře",
+          "dub",
+          "kvě",
+          "čvn",
+          "čvc",
+          "srp",
+          "zář",
+          "říj",
+          "lis",
+          "pro"
+        ],
+        "format": [
+          "led",
+          "úno",
+          "bře",
+          "dub",
+          "kvě",
+          "čvn",
+          "čvc",
+          "srp",
+          "zář",
+          "říj",
+          "lis",
+          "pro"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["neděle", "pondělí", "úterý", "středa", "čtvrtek", "pátek", "sobota"],
+      "short": ["ne", "po", "út", "st", "čt", "pá", "so"],
+      "narrow": ["N", "P", "Ú", "S", "Č", "P", "S"]
     }
   },
   "he": {
@@ -145,73 +214,487 @@
       "narrow": ["א׳", "ב׳", "ג׳", "ד׳", "ה׳", "ו׳", "ש׳"]
     }
   },
-  "kk": {
+  "pl": {
     "month": {
       "long": {
         "standalone": [
-          "Қаңтар",
-          "Ақпан",
-          "Наурыз",
-          "Сәуір",
-          "Мамыр",
-          "Маусым",
-          "Шілде",
-          "Тамыз",
-          "Қыркүйек",
-          "Қазан",
-          "Қараша",
-          "Желтоқсан"
+          "styczeń",
+          "luty",
+          "marzec",
+          "kwiecień",
+          "maj",
+          "czerwiec",
+          "lipiec",
+          "sierpień",
+          "wrzesień",
+          "październik",
+          "listopad",
+          "grudzień"
         ],
         "format": [
-          "қаңтар",
-          "ақпан",
-          "наурыз",
-          "сәуір",
-          "мамыр",
-          "маусым",
-          "шілде",
-          "тамыз",
-          "қыркүйек",
-          "қазан",
-          "қараша",
-          "желтоқсан"
+          "stycznia",
+          "lutego",
+          "marca",
+          "kwietnia",
+          "maja",
+          "czerwca",
+          "lipca",
+          "sierpnia",
+          "września",
+          "października",
+          "listopada",
+          "grudnia"
         ]
       },
       "short": {
         "standalone": [
-          "қаң.",
-          "ақп.",
-          "нау.",
-          "сәу.",
-          "мам.",
-          "мау.",
-          "шіл.",
-          "там.",
-          "қыр.",
-          "қаз.",
-          "қар.",
-          "жел."
+          "sty",
+          "lut",
+          "mar",
+          "kwi",
+          "maj",
+          "cze",
+          "lip",
+          "sie",
+          "wrz",
+          "paź",
+          "lis",
+          "gru"
         ],
         "format": [
-          "қаң.",
-          "ақп.",
-          "нау.",
-          "сәу.",
-          "мам.",
-          "мау.",
-          "шіл.",
-          "там.",
-          "қыр.",
-          "қаз.",
-          "қар.",
-          "жел."
+          "sty",
+          "lut",
+          "mar",
+          "kwi",
+          "maj",
+          "cze",
+          "lip",
+          "sie",
+          "wrz",
+          "paź",
+          "lis",
+          "gru"
         ]
       }
     },
     "weekday": {
-      "long": ["жексенбі", "дүйсенбі", "сейсенбі", "сәрсенбі", "бейсенбі", "жұма", "сенбі"],
-      "short": ["жс", "дс", "сс", "ср", "бс", "жм", "сб"],
-      "narrow": ["Ж", "Д", "С", "С", "Б", "Ж", "С"]
+      "long": ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"],
+      "short": ["niedz.", "pon.", "wt.", "śr.", "czw.", "pt.", "sob."],
+      "narrow": ["N", "P", "W", "Ś", "C", "P", "S"]
+    }
+  },
+  "ro": {
+    "month": {
+      "long": {
+        "standalone": [
+          "ianuarie",
+          "februarie",
+          "martie",
+          "aprilie",
+          "mai",
+          "iunie",
+          "iulie",
+          "august",
+          "septembrie",
+          "octombrie",
+          "noiembrie",
+          "decembrie"
+        ],
+        "format": [
+          "ianuarie",
+          "februarie",
+          "martie",
+          "aprilie",
+          "mai",
+          "iunie",
+          "iulie",
+          "august",
+          "septembrie",
+          "octombrie",
+          "noiembrie",
+          "decembrie"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "ian.",
+          "feb.",
+          "mar.",
+          "apr.",
+          "mai",
+          "iun.",
+          "iul.",
+          "aug.",
+          "sept.",
+          "oct.",
+          "nov.",
+          "dec."
+        ],
+        "format": [
+          "ian.",
+          "feb.",
+          "mar.",
+          "apr.",
+          "mai",
+          "iun.",
+          "iul.",
+          "aug.",
+          "sept.",
+          "oct.",
+          "nov.",
+          "dec."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["duminică", "luni", "marți", "miercuri", "joi", "vineri", "sâmbătă"],
+      "short": ["dum.", "lun.", "mar.", "mie.", "joi", "vin.", "sâm."],
+      "narrow": ["D", "L", "M", "M", "J", "V", "S"]
+    }
+  },
+  "vi": {
+    "month": {
+      "long": {
+        "standalone": [
+          "Tháng 1",
+          "Tháng 2",
+          "Tháng 3",
+          "Tháng 4",
+          "Tháng 5",
+          "Tháng 6",
+          "Tháng 7",
+          "Tháng 8",
+          "Tháng 9",
+          "Tháng 10",
+          "Tháng 11",
+          "Tháng 12"
+        ],
+        "format": [
+          "tháng 1",
+          "tháng 2",
+          "tháng 3",
+          "tháng 4",
+          "tháng 5",
+          "tháng 6",
+          "tháng 7",
+          "tháng 8",
+          "tháng 9",
+          "tháng 10",
+          "tháng 11",
+          "tháng 12"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "Tháng 1",
+          "Tháng 2",
+          "Tháng 3",
+          "Tháng 4",
+          "Tháng 5",
+          "Tháng 6",
+          "Tháng 7",
+          "Tháng 8",
+          "Tháng 9",
+          "Tháng 10",
+          "Tháng 11",
+          "Tháng 12"
+        ],
+        "format": [
+          "thg 1",
+          "thg 2",
+          "thg 3",
+          "thg 4",
+          "thg 5",
+          "thg 6",
+          "thg 7",
+          "thg 8",
+          "thg 9",
+          "thg 10",
+          "thg 11",
+          "thg 12"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"],
+      "short": ["CN", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"],
+      "narrow": ["CN", "T2", "T3", "T4", "T5", "T6", "T7"]
+    }
+  },
+  "uk": {
+    "month": {
+      "long": {
+        "standalone": [
+          "січень",
+          "лютий",
+          "березень",
+          "квітень",
+          "травень",
+          "червень",
+          "липень",
+          "серпень",
+          "вересень",
+          "жовтень",
+          "листопад",
+          "грудень"
+        ],
+        "format": [
+          "січня",
+          "лютого",
+          "березня",
+          "квітня",
+          "травня",
+          "червня",
+          "липня",
+          "серпня",
+          "вересня",
+          "жовтня",
+          "листопада",
+          "грудня"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "січ.",
+          "лют.",
+          "бер.",
+          "квіт.",
+          "трав.",
+          "черв.",
+          "лип.",
+          "серп.",
+          "вер.",
+          "жовт.",
+          "лист.",
+          "груд."
+        ],
+        "format": [
+          "січ.",
+          "лют.",
+          "бер.",
+          "квіт.",
+          "трав.",
+          "черв.",
+          "лип.",
+          "серп.",
+          "вер.",
+          "жовт.",
+          "лист.",
+          "груд."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["неділя", "понеділок", "вівторок", "середа", "четвер", "пʼятниця", "субота"],
+      "short": ["нд", "пн", "вт", "ср", "чт", "пт", "сб"],
+      "narrow": ["Н", "П", "В", "С", "Ч", "П", "С"]
+    }
+  },
+  "de": {
+    "month": {
+      "long": {
+        "standalone": [
+          "Januar",
+          "Februar",
+          "März",
+          "April",
+          "Mai",
+          "Juni",
+          "Juli",
+          "August",
+          "September",
+          "Oktober",
+          "November",
+          "Dezember"
+        ],
+        "format": [
+          "Januar",
+          "Februar",
+          "März",
+          "April",
+          "Mai",
+          "Juni",
+          "Juli",
+          "August",
+          "September",
+          "Oktober",
+          "November",
+          "Dezember"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "Jan",
+          "Feb",
+          "Mär",
+          "Apr",
+          "Mai",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Dez"
+        ],
+        "format": [
+          "Jan.",
+          "Feb.",
+          "März",
+          "Apr.",
+          "Mai",
+          "Juni",
+          "Juli",
+          "Aug.",
+          "Sept.",
+          "Okt.",
+          "Nov.",
+          "Dez."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
+      "short": ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+      "narrow": ["S", "M", "D", "M", "D", "F", "S"]
+    }
+  },
+  "ru": {
+    "month": {
+      "long": {
+        "standalone": [
+          "январь",
+          "февраль",
+          "март",
+          "апрель",
+          "май",
+          "июнь",
+          "июль",
+          "август",
+          "сентябрь",
+          "октябрь",
+          "ноябрь",
+          "декабрь"
+        ],
+        "format": [
+          "января",
+          "февраля",
+          "марта",
+          "апреля",
+          "мая",
+          "июня",
+          "июля",
+          "августа",
+          "сентября",
+          "октября",
+          "ноября",
+          "декабря"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "янв.",
+          "февр.",
+          "март",
+          "апр.",
+          "май",
+          "июнь",
+          "июль",
+          "авг.",
+          "сент.",
+          "окт.",
+          "нояб.",
+          "дек."
+        ],
+        "format": [
+          "янв.",
+          "февр.",
+          "мар.",
+          "апр.",
+          "мая",
+          "июн.",
+          "июл.",
+          "авг.",
+          "сент.",
+          "окт.",
+          "нояб.",
+          "дек."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
+      "short": ["вс", "пн", "вт", "ср", "чт", "пт", "сб"],
+      "narrow": ["В", "П", "В", "С", "Ч", "П", "С"]
+    }
+  },
+  "hr": {
+    "month": {
+      "long": {
+        "standalone": [
+          "siječanj",
+          "veljača",
+          "ožujak",
+          "travanj",
+          "svibanj",
+          "lipanj",
+          "srpanj",
+          "kolovoz",
+          "rujan",
+          "listopad",
+          "studeni",
+          "prosinac"
+        ],
+        "format": [
+          "siječnja",
+          "veljače",
+          "ožujka",
+          "travnja",
+          "svibnja",
+          "lipnja",
+          "srpnja",
+          "kolovoza",
+          "rujna",
+          "listopada",
+          "studenoga",
+          "prosinca"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "sij",
+          "velj",
+          "ožu",
+          "tra",
+          "svi",
+          "lip",
+          "srp",
+          "kol",
+          "ruj",
+          "lis",
+          "stu",
+          "pro"
+        ],
+        "format": [
+          "sij",
+          "velj",
+          "ožu",
+          "tra",
+          "svi",
+          "lip",
+          "srp",
+          "kol",
+          "ruj",
+          "lis",
+          "stu",
+          "pro"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["nedjelja", "ponedjeljak", "utorak", "srijeda", "četvrtak", "petak", "subota"],
+      "short": ["ned", "pon", "uto", "sri", "čet", "pet", "sub"],
+      "narrow": ["n", "p", "u", "s", "č", "p", "s"]
     }
   },
   "sv": {
@@ -283,211 +766,73 @@
       "narrow": ["S", "M", "T", "O", "T", "F", "L"]
     }
   },
-  "fr": {
+  "it": {
     "month": {
       "long": {
         "standalone": [
-          "janvier",
-          "février",
-          "mars",
-          "avril",
-          "mai",
-          "juin",
-          "juillet",
-          "août",
-          "septembre",
-          "octobre",
+          "gennaio",
+          "febbraio",
+          "marzo",
+          "aprile",
+          "maggio",
+          "giugno",
+          "luglio",
+          "agosto",
+          "settembre",
+          "ottobre",
           "novembre",
-          "décembre"
+          "dicembre"
         ],
         "format": [
-          "janvier",
-          "février",
-          "mars",
-          "avril",
-          "mai",
-          "juin",
-          "juillet",
-          "août",
-          "septembre",
-          "octobre",
+          "gennaio",
+          "febbraio",
+          "marzo",
+          "aprile",
+          "maggio",
+          "giugno",
+          "luglio",
+          "agosto",
+          "settembre",
+          "ottobre",
           "novembre",
-          "décembre"
+          "dicembre"
         ]
       },
       "short": {
         "standalone": [
-          "janv.",
-          "févr.",
-          "mars",
-          "avr.",
-          "mai",
-          "juin",
-          "juil.",
-          "août",
-          "sept.",
-          "oct.",
-          "nov.",
-          "déc."
-        ],
-        "format": [
-          "janv.",
-          "févr.",
-          "mars",
-          "avr.",
-          "mai",
-          "juin",
-          "juil.",
-          "août",
-          "sept.",
-          "oct.",
-          "nov.",
-          "déc."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
-      "short": ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
-      "narrow": ["D", "L", "M", "M", "J", "V", "S"]
-    }
-  },
-  "tr": {
-    "month": {
-      "long": {
-        "standalone": [
-          "Ocak",
-          "Şubat",
-          "Mart",
-          "Nisan",
-          "Mayıs",
-          "Haziran",
-          "Temmuz",
-          "Ağustos",
-          "Eylül",
-          "Ekim",
-          "Kasım",
-          "Aralık"
-        ],
-        "format": [
-          "Ocak",
-          "Şubat",
-          "Mart",
-          "Nisan",
-          "Mayıs",
-          "Haziran",
-          "Temmuz",
-          "Ağustos",
-          "Eylül",
-          "Ekim",
-          "Kasım",
-          "Aralık"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "Oca",
-          "Şub",
-          "Mar",
-          "Nis",
-          "May",
-          "Haz",
-          "Tem",
-          "Ağu",
-          "Eyl",
-          "Eki",
-          "Kas",
-          "Ara"
-        ],
-        "format": [
-          "Oca",
-          "Şub",
-          "Mar",
-          "Nis",
-          "May",
-          "Haz",
-          "Tem",
-          "Ağu",
-          "Eyl",
-          "Eki",
-          "Kas",
-          "Ara"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"],
-      "short": ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"],
-      "narrow": ["P", "P", "S", "Ç", "P", "C", "C"]
-    }
-  },
-  "uz": {
-    "month": {
-      "long": {
-        "standalone": [
-          "Yanvar",
-          "Fevral",
-          "Mart",
-          "Aprel",
-          "May",
-          "Iyun",
-          "Iyul",
-          "Avgust",
-          "Sentabr",
-          "Oktabr",
-          "Noyabr",
-          "Dekabr"
-        ],
-        "format": [
-          "yanvar",
-          "fevral",
-          "mart",
-          "aprel",
-          "may",
-          "iyun",
-          "iyul",
-          "avgust",
-          "sentabr",
-          "oktabr",
-          "noyabr",
-          "dekabr"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "Yan",
-          "Fev",
-          "Mar",
-          "Apr",
-          "May",
-          "Iyn",
-          "Iyl",
-          "Avg",
-          "Sen",
-          "Okt",
-          "Noy",
-          "Dek"
-        ],
-        "format": [
-          "yan",
-          "fev",
+          "gen",
+          "feb",
           "mar",
           "apr",
-          "may",
-          "iyn",
-          "iyl",
-          "avg",
-          "sen",
-          "okt",
-          "noy",
-          "dek"
+          "mag",
+          "giu",
+          "lug",
+          "ago",
+          "set",
+          "ott",
+          "nov",
+          "dic"
+        ],
+        "format": [
+          "gen",
+          "feb",
+          "mar",
+          "apr",
+          "mag",
+          "giu",
+          "lug",
+          "ago",
+          "set",
+          "ott",
+          "nov",
+          "dic"
         ]
       }
     },
     "weekday": {
-      "long": ["yakshanba", "dushanba", "seshanba", "chorshanba", "payshanba", "juma", "shanba"],
-      "short": ["Yak", "Dush", "Sesh", "Chor", "Pay", "Jum", "Shan"],
-      "narrow": ["Y", "D", "S", "C", "P", "J", "S"]
+      "long": ["domenica", "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato"],
+      "short": ["dom", "lun", "mar", "mer", "gio", "ven", "sab"],
+      "narrow": ["D", "L", "M", "M", "G", "V", "S"]
     }
   },
   "az": {
@@ -567,1522 +912,73 @@
       "narrow": ["7", "1", "2", "3", "4", "5", "6"]
     }
   },
-  "sk": {
+  "zh": {
     "month": {
       "long": {
         "standalone": [
-          "január",
-          "február",
-          "marec",
-          "apríl",
-          "máj",
-          "jún",
-          "júl",
-          "august",
-          "september",
-          "október",
-          "november",
-          "december"
+          "一月",
+          "二月",
+          "三月",
+          "四月",
+          "五月",
+          "六月",
+          "七月",
+          "八月",
+          "九月",
+          "十月",
+          "十一月",
+          "十二月"
         ],
         "format": [
-          "januára",
-          "februára",
-          "marca",
-          "apríla",
-          "mája",
-          "júna",
-          "júla",
-          "augusta",
-          "septembra",
-          "októbra",
-          "novembra",
-          "decembra"
+          "一月",
+          "二月",
+          "三月",
+          "四月",
+          "五月",
+          "六月",
+          "七月",
+          "八月",
+          "九月",
+          "十月",
+          "十一月",
+          "十二月"
         ]
       },
       "short": {
         "standalone": [
-          "jan",
-          "feb",
-          "mar",
-          "apr",
-          "máj",
-          "jún",
-          "júl",
-          "aug",
-          "sep",
-          "okt",
-          "nov",
-          "dec"
+          "1月",
+          "2月",
+          "3月",
+          "4月",
+          "5月",
+          "6月",
+          "7月",
+          "8月",
+          "9月",
+          "10月",
+          "11月",
+          "12月"
         ],
         "format": [
-          "jan",
-          "feb",
-          "mar",
-          "apr",
-          "máj",
-          "jún",
-          "júl",
-          "aug",
-          "sep",
-          "okt",
-          "nov",
-          "dec"
+          "1月",
+          "2月",
+          "3月",
+          "4月",
+          "5月",
+          "6月",
+          "7月",
+          "8月",
+          "9月",
+          "10月",
+          "11月",
+          "12月"
         ]
       }
     },
     "weekday": {
-      "long": ["nedeľa", "pondelok", "utorok", "streda", "štvrtok", "piatok", "sobota"],
-      "short": ["ne", "po", "ut", "st", "št", "pi", "so"],
-      "narrow": ["n", "p", "u", "s", "š", "p", "s"]
-    }
-  },
-  "da": {
-    "month": {
-      "long": {
-        "standalone": [
-          "januar",
-          "februar",
-          "marts",
-          "april",
-          "maj",
-          "juni",
-          "juli",
-          "august",
-          "september",
-          "oktober",
-          "november",
-          "december"
-        ],
-        "format": [
-          "januar",
-          "februar",
-          "marts",
-          "april",
-          "maj",
-          "juni",
-          "juli",
-          "august",
-          "september",
-          "oktober",
-          "november",
-          "december"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "jan.",
-          "feb.",
-          "mar.",
-          "apr.",
-          "maj",
-          "jun.",
-          "jul.",
-          "aug.",
-          "sep.",
-          "okt.",
-          "nov.",
-          "dec."
-        ],
-        "format": [
-          "jan.",
-          "feb.",
-          "mar.",
-          "apr.",
-          "maj",
-          "jun.",
-          "jul.",
-          "aug.",
-          "sep.",
-          "okt.",
-          "nov.",
-          "dec."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"],
-      "short": ["søn.", "man.", "tirs.", "ons.", "tors.", "fre.", "lør."],
-      "narrow": ["S", "M", "T", "O", "T", "F", "L"]
-    }
-  },
-  "hu": {
-    "month": {
-      "long": {
-        "standalone": [
-          "január",
-          "február",
-          "március",
-          "április",
-          "május",
-          "június",
-          "július",
-          "augusztus",
-          "szeptember",
-          "október",
-          "november",
-          "december"
-        ],
-        "format": [
-          "január",
-          "február",
-          "március",
-          "április",
-          "május",
-          "június",
-          "július",
-          "augusztus",
-          "szeptember",
-          "október",
-          "november",
-          "december"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "jan.",
-          "febr.",
-          "márc.",
-          "ápr.",
-          "máj.",
-          "jún.",
-          "júl.",
-          "aug.",
-          "szept.",
-          "okt.",
-          "nov.",
-          "dec."
-        ],
-        "format": [
-          "jan.",
-          "febr.",
-          "márc.",
-          "ápr.",
-          "máj.",
-          "jún.",
-          "júl.",
-          "aug.",
-          "szept.",
-          "okt.",
-          "nov.",
-          "dec."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["vasárnap", "hétfő", "kedd", "szerda", "csütörtök", "péntek", "szombat"],
-      "short": ["V", "H", "K", "Sze", "Cs", "P", "Szo"],
-      "narrow": ["V", "H", "K", "Sz", "Cs", "P", "Sz"]
-    }
-  },
-  "th": {
-    "month": {
-      "long": {
-        "standalone": [
-          "มกราคม",
-          "กุมภาพันธ์",
-          "มีนาคม",
-          "เมษายน",
-          "พฤษภาคม",
-          "มิถุนายน",
-          "กรกฎาคม",
-          "สิงหาคม",
-          "กันยายน",
-          "ตุลาคม",
-          "พฤศจิกายน",
-          "ธันวาคม"
-        ],
-        "format": [
-          "มกราคม",
-          "กุมภาพันธ์",
-          "มีนาคม",
-          "เมษายน",
-          "พฤษภาคม",
-          "มิถุนายน",
-          "กรกฎาคม",
-          "สิงหาคม",
-          "กันยายน",
-          "ตุลาคม",
-          "พฤศจิกายน",
-          "ธันวาคม"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "ม.ค.",
-          "ก.พ.",
-          "มี.ค.",
-          "เม.ย.",
-          "พ.ค.",
-          "มิ.ย.",
-          "ก.ค.",
-          "ส.ค.",
-          "ก.ย.",
-          "ต.ค.",
-          "พ.ย.",
-          "ธ.ค."
-        ],
-        "format": [
-          "ม.ค.",
-          "ก.พ.",
-          "มี.ค.",
-          "เม.ย.",
-          "พ.ค.",
-          "มิ.ย.",
-          "ก.ค.",
-          "ส.ค.",
-          "ก.ย.",
-          "ต.ค.",
-          "พ.ย.",
-          "ธ.ค."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์"],
-      "short": ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์"],
-      "narrow": ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส"]
-    }
-  },
-  "ru": {
-    "month": {
-      "long": {
-        "standalone": [
-          "январь",
-          "февраль",
-          "март",
-          "апрель",
-          "май",
-          "июнь",
-          "июль",
-          "август",
-          "сентябрь",
-          "октябрь",
-          "ноябрь",
-          "декабрь"
-        ],
-        "format": [
-          "января",
-          "февраля",
-          "марта",
-          "апреля",
-          "мая",
-          "июня",
-          "июля",
-          "августа",
-          "сентября",
-          "октября",
-          "ноября",
-          "декабря"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "янв.",
-          "февр.",
-          "март",
-          "апр.",
-          "май",
-          "июнь",
-          "июль",
-          "авг.",
-          "сент.",
-          "окт.",
-          "нояб.",
-          "дек."
-        ],
-        "format": [
-          "янв.",
-          "февр.",
-          "мар.",
-          "апр.",
-          "мая",
-          "июн.",
-          "июл.",
-          "авг.",
-          "сент.",
-          "окт.",
-          "нояб.",
-          "дек."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
-      "short": ["вс", "пн", "вт", "ср", "чт", "пт", "сб"],
-      "narrow": ["В", "П", "В", "С", "Ч", "П", "С"]
-    }
-  },
-  "de": {
-    "month": {
-      "long": {
-        "standalone": [
-          "Januar",
-          "Februar",
-          "März",
-          "April",
-          "Mai",
-          "Juni",
-          "Juli",
-          "August",
-          "September",
-          "Oktober",
-          "November",
-          "Dezember"
-        ],
-        "format": [
-          "Januar",
-          "Februar",
-          "März",
-          "April",
-          "Mai",
-          "Juni",
-          "Juli",
-          "August",
-          "September",
-          "Oktober",
-          "November",
-          "Dezember"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "Jan",
-          "Feb",
-          "Mär",
-          "Apr",
-          "Mai",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Okt",
-          "Nov",
-          "Dez"
-        ],
-        "format": [
-          "Jan.",
-          "Feb.",
-          "März",
-          "Apr.",
-          "Mai",
-          "Juni",
-          "Juli",
-          "Aug.",
-          "Sept.",
-          "Okt.",
-          "Nov.",
-          "Dez."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
-      "short": ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
-      "narrow": ["S", "M", "D", "M", "D", "F", "S"]
-    }
-  },
-  "ar": {
-    "month": {
-      "long": {
-        "standalone": [
-          "يناير",
-          "فبراير",
-          "مارس",
-          "أبريل",
-          "مايو",
-          "يونيو",
-          "يوليو",
-          "أغسطس",
-          "سبتمبر",
-          "أكتوبر",
-          "نوفمبر",
-          "ديسمبر"
-        ],
-        "format": [
-          "يناير",
-          "فبراير",
-          "مارس",
-          "أبريل",
-          "مايو",
-          "يونيو",
-          "يوليو",
-          "أغسطس",
-          "سبتمبر",
-          "أكتوبر",
-          "نوفمبر",
-          "ديسمبر"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "يناير",
-          "فبراير",
-          "مارس",
-          "أبريل",
-          "مايو",
-          "يونيو",
-          "يوليو",
-          "أغسطس",
-          "سبتمبر",
-          "أكتوبر",
-          "نوفمبر",
-          "ديسمبر"
-        ],
-        "format": [
-          "يناير",
-          "فبراير",
-          "مارس",
-          "أبريل",
-          "مايو",
-          "يونيو",
-          "يوليو",
-          "أغسطس",
-          "سبتمبر",
-          "أكتوبر",
-          "نوفمبر",
-          "ديسمبر"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"],
-      "short": ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"],
-      "narrow": ["ح", "ن", "ث", "ر", "خ", "ج", "س"]
-    }
-  },
-  "es": {
-    "month": {
-      "long": {
-        "standalone": [
-          "enero",
-          "febrero",
-          "marzo",
-          "abril",
-          "mayo",
-          "junio",
-          "julio",
-          "agosto",
-          "septiembre",
-          "octubre",
-          "noviembre",
-          "diciembre"
-        ],
-        "format": [
-          "enero",
-          "febrero",
-          "marzo",
-          "abril",
-          "mayo",
-          "junio",
-          "julio",
-          "agosto",
-          "septiembre",
-          "octubre",
-          "noviembre",
-          "diciembre"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "ene",
-          "feb",
-          "mar",
-          "abr",
-          "may",
-          "jun",
-          "jul",
-          "ago",
-          "sept",
-          "oct",
-          "nov",
-          "dic"
-        ],
-        "format": [
-          "ene",
-          "feb",
-          "mar",
-          "abr",
-          "may",
-          "jun",
-          "jul",
-          "ago",
-          "sept",
-          "oct",
-          "nov",
-          "dic"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
-      "short": ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"],
-      "narrow": ["D", "L", "M", "X", "J", "V", "S"]
-    }
-  },
-  "nb": {
-    "month": {
-      "long": {
-        "standalone": [
-          "januar",
-          "februar",
-          "mars",
-          "april",
-          "mai",
-          "juni",
-          "juli",
-          "august",
-          "september",
-          "oktober",
-          "november",
-          "desember"
-        ],
-        "format": [
-          "januar",
-          "februar",
-          "mars",
-          "april",
-          "mai",
-          "juni",
-          "juli",
-          "august",
-          "september",
-          "oktober",
-          "november",
-          "desember"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "jan",
-          "feb",
-          "mar",
-          "apr",
-          "mai",
-          "jun",
-          "jul",
-          "aug",
-          "sep",
-          "okt",
-          "nov",
-          "des"
-        ],
-        "format": [
-          "jan.",
-          "feb.",
-          "mars",
-          "apr.",
-          "mai",
-          "juni",
-          "juli",
-          "aug.",
-          "sep.",
-          "okt.",
-          "nov.",
-          "des."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"],
-      "short": ["søn.", "man.", "tir.", "ons.", "tor.", "fre.", "lør."],
-      "narrow": ["S", "M", "T", "O", "T", "F", "L"]
-    }
-  },
-  "ko": {
-    "month": {
-      "long": {
-        "standalone": [
-          "1월",
-          "2월",
-          "3월",
-          "4월",
-          "5월",
-          "6월",
-          "7월",
-          "8월",
-          "9월",
-          "10월",
-          "11월",
-          "12월"
-        ],
-        "format": [
-          "1월",
-          "2월",
-          "3월",
-          "4월",
-          "5월",
-          "6월",
-          "7월",
-          "8월",
-          "9월",
-          "10월",
-          "11월",
-          "12월"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "1월",
-          "2월",
-          "3월",
-          "4월",
-          "5월",
-          "6월",
-          "7월",
-          "8월",
-          "9월",
-          "10월",
-          "11월",
-          "12월"
-        ],
-        "format": [
-          "1월",
-          "2월",
-          "3월",
-          "4월",
-          "5월",
-          "6월",
-          "7월",
-          "8월",
-          "9월",
-          "10월",
-          "11월",
-          "12월"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
-      "short": ["일", "월", "화", "수", "목", "금", "토"],
-      "narrow": ["일", "월", "화", "수", "목", "금", "토"]
-    }
-  },
-  "sr": {
-    "month": {
-      "long": {
-        "standalone": [
-          "јануар",
-          "фебруар",
-          "март",
-          "април",
-          "мај",
-          "јун",
-          "јул",
-          "август",
-          "септембар",
-          "октобар",
-          "новембар",
-          "децембар"
-        ],
-        "format": [
-          "јануар",
-          "фебруар",
-          "март",
-          "април",
-          "мај",
-          "јун",
-          "јул",
-          "август",
-          "септембар",
-          "октобар",
-          "новембар",
-          "децембар"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "јан",
-          "феб",
-          "мар",
-          "апр",
-          "мај",
-          "јун",
-          "јул",
-          "авг",
-          "сеп",
-          "окт",
-          "нов",
-          "дец"
-        ],
-        "format": [
-          "јан",
-          "феб",
-          "мар",
-          "апр",
-          "мај",
-          "јун",
-          "јул",
-          "авг",
-          "сеп",
-          "окт",
-          "нов",
-          "дец"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["недеља", "понедељак", "уторак", "среда", "четвртак", "петак", "субота"],
-      "short": ["нед", "пон", "уто", "сре", "чет", "пет", "суб"],
-      "narrow": ["н", "п", "у", "с", "ч", "п", "с"]
-    }
-  },
-  "id": {
-    "month": {
-      "long": {
-        "standalone": [
-          "Januari",
-          "Februari",
-          "Maret",
-          "April",
-          "Mei",
-          "Juni",
-          "Juli",
-          "Agustus",
-          "September",
-          "Oktober",
-          "November",
-          "Desember"
-        ],
-        "format": [
-          "Januari",
-          "Februari",
-          "Maret",
-          "April",
-          "Mei",
-          "Juni",
-          "Juli",
-          "Agustus",
-          "September",
-          "Oktober",
-          "November",
-          "Desember"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "Mei",
-          "Jun",
-          "Jul",
-          "Agu",
-          "Sep",
-          "Okt",
-          "Nov",
-          "Des"
-        ],
-        "format": [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "Mei",
-          "Jun",
-          "Jul",
-          "Agu",
-          "Sep",
-          "Okt",
-          "Nov",
-          "Des"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
-      "short": ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
-      "narrow": ["M", "S", "S", "R", "K", "J", "S"]
-    }
-  },
-  "tg": {
-    "month": {
-      "long": {
-        "standalone": [
-          "Январ",
-          "Феврал",
-          "Март",
-          "Апрел",
-          "Май",
-          "Июн",
-          "Июл",
-          "Август",
-          "Сентябр",
-          "Октябр",
-          "Ноябр",
-          "Декабр"
-        ],
-        "format": [
-          "Январ",
-          "Феврал",
-          "Март",
-          "Апрел",
-          "Май",
-          "Июн",
-          "Июл",
-          "Август",
-          "Сентябр",
-          "Октябр",
-          "Ноябр",
-          "Декабр"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "Янв",
-          "Фев",
-          "Мар",
-          "Апр",
-          "Май",
-          "Июн",
-          "Июл",
-          "Авг",
-          "Сен",
-          "Окт",
-          "Ноя",
-          "Дек"
-        ],
-        "format": [
-          "Янв",
-          "Фев",
-          "Мар",
-          "Апр",
-          "Май",
-          "Июн",
-          "Июл",
-          "Авг",
-          "Сен",
-          "Окт",
-          "Ноя",
-          "Дек"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["Якшанбе", "Душанбе", "Сешанбе", "Чоршанбе", "Панҷшанбе", "Ҷумъа", "Шанбе"],
-      "short": ["Яшб", "Дшб", "Сшб", "Чшб", "Пшб", "Ҷмъ", "Шнб"],
-      "narrow": ["Я", "Д", "С", "Ч", "П", "Ҷ", "Ш"]
-    }
-  },
-  "cs": {
-    "month": {
-      "long": {
-        "standalone": [
-          "leden",
-          "únor",
-          "březen",
-          "duben",
-          "květen",
-          "červen",
-          "červenec",
-          "srpen",
-          "září",
-          "říjen",
-          "listopad",
-          "prosinec"
-        ],
-        "format": [
-          "ledna",
-          "února",
-          "března",
-          "dubna",
-          "května",
-          "června",
-          "července",
-          "srpna",
-          "září",
-          "října",
-          "listopadu",
-          "prosince"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "led",
-          "úno",
-          "bře",
-          "dub",
-          "kvě",
-          "čvn",
-          "čvc",
-          "srp",
-          "zář",
-          "říj",
-          "lis",
-          "pro"
-        ],
-        "format": [
-          "led",
-          "úno",
-          "bře",
-          "dub",
-          "kvě",
-          "čvn",
-          "čvc",
-          "srp",
-          "zář",
-          "říj",
-          "lis",
-          "pro"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["neděle", "pondělí", "úterý", "středa", "čtvrtek", "pátek", "sobota"],
-      "short": ["ne", "po", "út", "st", "čt", "pá", "so"],
-      "narrow": ["N", "P", "Ú", "S", "Č", "P", "S"]
-    }
-  },
-  "it": {
-    "month": {
-      "long": {
-        "standalone": [
-          "gennaio",
-          "febbraio",
-          "marzo",
-          "aprile",
-          "maggio",
-          "giugno",
-          "luglio",
-          "agosto",
-          "settembre",
-          "ottobre",
-          "novembre",
-          "dicembre"
-        ],
-        "format": [
-          "gennaio",
-          "febbraio",
-          "marzo",
-          "aprile",
-          "maggio",
-          "giugno",
-          "luglio",
-          "agosto",
-          "settembre",
-          "ottobre",
-          "novembre",
-          "dicembre"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "gen",
-          "feb",
-          "mar",
-          "apr",
-          "mag",
-          "giu",
-          "lug",
-          "ago",
-          "set",
-          "ott",
-          "nov",
-          "dic"
-        ],
-        "format": [
-          "gen",
-          "feb",
-          "mar",
-          "apr",
-          "mag",
-          "giu",
-          "lug",
-          "ago",
-          "set",
-          "ott",
-          "nov",
-          "dic"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["domenica", "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato"],
-      "short": ["dom", "lun", "mar", "mer", "gio", "ven", "sab"],
-      "narrow": ["D", "L", "M", "M", "G", "V", "S"]
-    }
-  },
-  "uk": {
-    "month": {
-      "long": {
-        "standalone": [
-          "січень",
-          "лютий",
-          "березень",
-          "квітень",
-          "травень",
-          "червень",
-          "липень",
-          "серпень",
-          "вересень",
-          "жовтень",
-          "листопад",
-          "грудень"
-        ],
-        "format": [
-          "січня",
-          "лютого",
-          "березня",
-          "квітня",
-          "травня",
-          "червня",
-          "липня",
-          "серпня",
-          "вересня",
-          "жовтня",
-          "листопада",
-          "грудня"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "січ.",
-          "лют.",
-          "бер.",
-          "квіт.",
-          "трав.",
-          "черв.",
-          "лип.",
-          "серп.",
-          "вер.",
-          "жовт.",
-          "лист.",
-          "груд."
-        ],
-        "format": [
-          "січ.",
-          "лют.",
-          "бер.",
-          "квіт.",
-          "трав.",
-          "черв.",
-          "лип.",
-          "серп.",
-          "вер.",
-          "жовт.",
-          "лист.",
-          "груд."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["неділя", "понеділок", "вівторок", "середа", "четвер", "пʼятниця", "субота"],
-      "short": ["нд", "пн", "вт", "ср", "чт", "пт", "сб"],
-      "narrow": ["Н", "П", "В", "С", "Ч", "П", "С"]
-    }
-  },
-  "vi": {
-    "month": {
-      "long": {
-        "standalone": [
-          "Tháng 1",
-          "Tháng 2",
-          "Tháng 3",
-          "Tháng 4",
-          "Tháng 5",
-          "Tháng 6",
-          "Tháng 7",
-          "Tháng 8",
-          "Tháng 9",
-          "Tháng 10",
-          "Tháng 11",
-          "Tháng 12"
-        ],
-        "format": [
-          "tháng 1",
-          "tháng 2",
-          "tháng 3",
-          "tháng 4",
-          "tháng 5",
-          "tháng 6",
-          "tháng 7",
-          "tháng 8",
-          "tháng 9",
-          "tháng 10",
-          "tháng 11",
-          "tháng 12"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "Tháng 1",
-          "Tháng 2",
-          "Tháng 3",
-          "Tháng 4",
-          "Tháng 5",
-          "Tháng 6",
-          "Tháng 7",
-          "Tháng 8",
-          "Tháng 9",
-          "Tháng 10",
-          "Tháng 11",
-          "Tháng 12"
-        ],
-        "format": [
-          "thg 1",
-          "thg 2",
-          "thg 3",
-          "thg 4",
-          "thg 5",
-          "thg 6",
-          "thg 7",
-          "thg 8",
-          "thg 9",
-          "thg 10",
-          "thg 11",
-          "thg 12"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"],
-      "short": ["CN", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"],
-      "narrow": ["CN", "T2", "T3", "T4", "T5", "T6", "T7"]
-    }
-  },
-  "pl": {
-    "month": {
-      "long": {
-        "standalone": [
-          "styczeń",
-          "luty",
-          "marzec",
-          "kwiecień",
-          "maj",
-          "czerwiec",
-          "lipiec",
-          "sierpień",
-          "wrzesień",
-          "październik",
-          "listopad",
-          "grudzień"
-        ],
-        "format": [
-          "stycznia",
-          "lutego",
-          "marca",
-          "kwietnia",
-          "maja",
-          "czerwca",
-          "lipca",
-          "sierpnia",
-          "września",
-          "października",
-          "listopada",
-          "grudnia"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "sty",
-          "lut",
-          "mar",
-          "kwi",
-          "maj",
-          "cze",
-          "lip",
-          "sie",
-          "wrz",
-          "paź",
-          "lis",
-          "gru"
-        ],
-        "format": [
-          "sty",
-          "lut",
-          "mar",
-          "kwi",
-          "maj",
-          "cze",
-          "lip",
-          "sie",
-          "wrz",
-          "paź",
-          "lis",
-          "gru"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"],
-      "short": ["niedz.", "pon.", "wt.", "śr.", "czw.", "pt.", "sob."],
-      "narrow": ["N", "P", "W", "Ś", "C", "P", "S"]
-    }
-  },
-  "hr": {
-    "month": {
-      "long": {
-        "standalone": [
-          "siječanj",
-          "veljača",
-          "ožujak",
-          "travanj",
-          "svibanj",
-          "lipanj",
-          "srpanj",
-          "kolovoz",
-          "rujan",
-          "listopad",
-          "studeni",
-          "prosinac"
-        ],
-        "format": [
-          "siječnja",
-          "veljače",
-          "ožujka",
-          "travnja",
-          "svibnja",
-          "lipnja",
-          "srpnja",
-          "kolovoza",
-          "rujna",
-          "listopada",
-          "studenoga",
-          "prosinca"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "sij",
-          "velj",
-          "ožu",
-          "tra",
-          "svi",
-          "lip",
-          "srp",
-          "kol",
-          "ruj",
-          "lis",
-          "stu",
-          "pro"
-        ],
-        "format": [
-          "sij",
-          "velj",
-          "ožu",
-          "tra",
-          "svi",
-          "lip",
-          "srp",
-          "kol",
-          "ruj",
-          "lis",
-          "stu",
-          "pro"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["nedjelja", "ponedjeljak", "utorak", "srijeda", "četvrtak", "petak", "subota"],
-      "short": ["ned", "pon", "uto", "sri", "čet", "pet", "sub"],
-      "narrow": ["n", "p", "u", "s", "č", "p", "s"]
-    }
-  },
-  "sl": {
-    "month": {
-      "long": {
-        "standalone": [
-          "januar",
-          "februar",
-          "marec",
-          "april",
-          "maj",
-          "junij",
-          "julij",
-          "avgust",
-          "september",
-          "oktober",
-          "november",
-          "december"
-        ],
-        "format": [
-          "januar",
-          "februar",
-          "marec",
-          "april",
-          "maj",
-          "junij",
-          "julij",
-          "avgust",
-          "september",
-          "oktober",
-          "november",
-          "december"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "jan.",
-          "feb.",
-          "mar.",
-          "apr.",
-          "maj",
-          "jun.",
-          "jul.",
-          "avg.",
-          "sep.",
-          "okt.",
-          "nov.",
-          "dec."
-        ],
-        "format": [
-          "jan.",
-          "feb.",
-          "mar.",
-          "apr.",
-          "maj",
-          "jun.",
-          "jul.",
-          "avg.",
-          "sep.",
-          "okt.",
-          "nov.",
-          "dec."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["nedelja", "ponedeljek", "torek", "sreda", "četrtek", "petek", "sobota"],
-      "short": ["ned.", "pon.", "tor.", "sre.", "čet.", "pet.", "sob."],
-      "narrow": ["n", "p", "t", "s", "č", "p", "s"]
-    }
-  },
-  "ro": {
-    "month": {
-      "long": {
-        "standalone": [
-          "ianuarie",
-          "februarie",
-          "martie",
-          "aprilie",
-          "mai",
-          "iunie",
-          "iulie",
-          "august",
-          "septembrie",
-          "octombrie",
-          "noiembrie",
-          "decembrie"
-        ],
-        "format": [
-          "ianuarie",
-          "februarie",
-          "martie",
-          "aprilie",
-          "mai",
-          "iunie",
-          "iulie",
-          "august",
-          "septembrie",
-          "octombrie",
-          "noiembrie",
-          "decembrie"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "ian.",
-          "feb.",
-          "mar.",
-          "apr.",
-          "mai",
-          "iun.",
-          "iul.",
-          "aug.",
-          "sept.",
-          "oct.",
-          "nov.",
-          "dec."
-        ],
-        "format": [
-          "ian.",
-          "feb.",
-          "mar.",
-          "apr.",
-          "mai",
-          "iun.",
-          "iul.",
-          "aug.",
-          "sept.",
-          "oct.",
-          "nov.",
-          "dec."
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["duminică", "luni", "marți", "miercuri", "joi", "vineri", "sâmbătă"],
-      "short": ["dum.", "lun.", "mar.", "mie.", "joi", "vin.", "sâm."],
-      "narrow": ["D", "L", "M", "M", "J", "V", "S"]
-    }
-  },
-  "nl": {
-    "month": {
-      "long": {
-        "standalone": [
-          "januari",
-          "februari",
-          "maart",
-          "april",
-          "mei",
-          "juni",
-          "juli",
-          "augustus",
-          "september",
-          "oktober",
-          "november",
-          "december"
-        ],
-        "format": [
-          "januari",
-          "februari",
-          "maart",
-          "april",
-          "mei",
-          "juni",
-          "juli",
-          "augustus",
-          "september",
-          "oktober",
-          "november",
-          "december"
-        ]
-      },
-      "short": {
-        "standalone": [
-          "jan",
-          "feb",
-          "mrt",
-          "apr",
-          "mei",
-          "jun",
-          "jul",
-          "aug",
-          "sep",
-          "okt",
-          "nov",
-          "dec"
-        ],
-        "format": [
-          "jan",
-          "feb",
-          "mrt",
-          "apr",
-          "mei",
-          "jun",
-          "jul",
-          "aug",
-          "sep",
-          "okt",
-          "nov",
-          "dec"
-        ]
-      }
-    },
-    "weekday": {
-      "long": ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"],
-      "short": ["zo", "ma", "di", "wo", "do", "vr", "za"],
-      "narrow": ["Z", "M", "D", "W", "D", "V", "Z"]
+      "long": ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+      "short": ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
+      "narrow": ["日", "一", "二", "三", "四", "五", "六"]
     }
   },
   "fi": {
@@ -2160,6 +1056,1110 @@
       ],
       "short": ["su", "ma", "ti", "ke", "to", "pe", "la"],
       "narrow": ["S", "M", "T", "K", "T", "P", "L"]
+    }
+  },
+  "ar": {
+    "month": {
+      "long": {
+        "standalone": [
+          "يناير",
+          "فبراير",
+          "مارس",
+          "أبريل",
+          "مايو",
+          "يونيو",
+          "يوليو",
+          "أغسطس",
+          "سبتمبر",
+          "أكتوبر",
+          "نوفمبر",
+          "ديسمبر"
+        ],
+        "format": [
+          "يناير",
+          "فبراير",
+          "مارس",
+          "أبريل",
+          "مايو",
+          "يونيو",
+          "يوليو",
+          "أغسطس",
+          "سبتمبر",
+          "أكتوبر",
+          "نوفمبر",
+          "ديسمبر"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "يناير",
+          "فبراير",
+          "مارس",
+          "أبريل",
+          "مايو",
+          "يونيو",
+          "يوليو",
+          "أغسطس",
+          "سبتمبر",
+          "أكتوبر",
+          "نوفمبر",
+          "ديسمبر"
+        ],
+        "format": [
+          "يناير",
+          "فبراير",
+          "مارس",
+          "أبريل",
+          "مايو",
+          "يونيو",
+          "يوليو",
+          "أغسطس",
+          "سبتمبر",
+          "أكتوبر",
+          "نوفمبر",
+          "ديسمبر"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"],
+      "short": ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"],
+      "narrow": ["ح", "ن", "ث", "ر", "خ", "ج", "س"]
+    }
+  },
+  "tg": {
+    "month": {
+      "long": {
+        "standalone": [
+          "Январ",
+          "Феврал",
+          "Март",
+          "Апрел",
+          "Май",
+          "Июн",
+          "Июл",
+          "Август",
+          "Сентябр",
+          "Октябр",
+          "Ноябр",
+          "Декабр"
+        ],
+        "format": [
+          "Январ",
+          "Феврал",
+          "Март",
+          "Апрел",
+          "Май",
+          "Июн",
+          "Июл",
+          "Август",
+          "Сентябр",
+          "Октябр",
+          "Ноябр",
+          "Декабр"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "Янв",
+          "Фев",
+          "Мар",
+          "Апр",
+          "Май",
+          "Июн",
+          "Июл",
+          "Авг",
+          "Сен",
+          "Окт",
+          "Ноя",
+          "Дек"
+        ],
+        "format": [
+          "Янв",
+          "Фев",
+          "Мар",
+          "Апр",
+          "Май",
+          "Июн",
+          "Июл",
+          "Авг",
+          "Сен",
+          "Окт",
+          "Ноя",
+          "Дек"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["Якшанбе", "Душанбе", "Сешанбе", "Чоршанбе", "Панҷшанбе", "Ҷумъа", "Шанбе"],
+      "short": ["Яшб", "Дшб", "Сшб", "Чшб", "Пшб", "Ҷмъ", "Шнб"],
+      "narrow": ["Я", "Д", "С", "Ч", "П", "Ҷ", "Ш"]
+    }
+  },
+  "id": {
+    "month": {
+      "long": {
+        "standalone": [
+          "Januari",
+          "Februari",
+          "Maret",
+          "April",
+          "Mei",
+          "Juni",
+          "Juli",
+          "Agustus",
+          "September",
+          "Oktober",
+          "November",
+          "Desember"
+        ],
+        "format": [
+          "Januari",
+          "Februari",
+          "Maret",
+          "April",
+          "Mei",
+          "Juni",
+          "Juli",
+          "Agustus",
+          "September",
+          "Oktober",
+          "November",
+          "Desember"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "Mei",
+          "Jun",
+          "Jul",
+          "Agu",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Des"
+        ],
+        "format": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "Mei",
+          "Jun",
+          "Jul",
+          "Agu",
+          "Sep",
+          "Okt",
+          "Nov",
+          "Des"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+      "short": ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+      "narrow": ["M", "S", "S", "R", "K", "J", "S"]
+    }
+  },
+  "sl": {
+    "month": {
+      "long": {
+        "standalone": [
+          "januar",
+          "februar",
+          "marec",
+          "april",
+          "maj",
+          "junij",
+          "julij",
+          "avgust",
+          "september",
+          "oktober",
+          "november",
+          "december"
+        ],
+        "format": [
+          "januar",
+          "februar",
+          "marec",
+          "april",
+          "maj",
+          "junij",
+          "julij",
+          "avgust",
+          "september",
+          "oktober",
+          "november",
+          "december"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "jan.",
+          "feb.",
+          "mar.",
+          "apr.",
+          "maj",
+          "jun.",
+          "jul.",
+          "avg.",
+          "sep.",
+          "okt.",
+          "nov.",
+          "dec."
+        ],
+        "format": [
+          "jan.",
+          "feb.",
+          "mar.",
+          "apr.",
+          "maj",
+          "jun.",
+          "jul.",
+          "avg.",
+          "sep.",
+          "okt.",
+          "nov.",
+          "dec."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["nedelja", "ponedeljek", "torek", "sreda", "četrtek", "petek", "sobota"],
+      "short": ["ned.", "pon.", "tor.", "sre.", "čet.", "pet.", "sob."],
+      "narrow": ["n", "p", "t", "s", "č", "p", "s"]
+    }
+  },
+  "hu": {
+    "month": {
+      "long": {
+        "standalone": [
+          "január",
+          "február",
+          "március",
+          "április",
+          "május",
+          "június",
+          "július",
+          "augusztus",
+          "szeptember",
+          "október",
+          "november",
+          "december"
+        ],
+        "format": [
+          "január",
+          "február",
+          "március",
+          "április",
+          "május",
+          "június",
+          "július",
+          "augusztus",
+          "szeptember",
+          "október",
+          "november",
+          "december"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "jan.",
+          "febr.",
+          "márc.",
+          "ápr.",
+          "máj.",
+          "jún.",
+          "júl.",
+          "aug.",
+          "szept.",
+          "okt.",
+          "nov.",
+          "dec."
+        ],
+        "format": [
+          "jan.",
+          "febr.",
+          "márc.",
+          "ápr.",
+          "máj.",
+          "jún.",
+          "júl.",
+          "aug.",
+          "szept.",
+          "okt.",
+          "nov.",
+          "dec."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["vasárnap", "hétfő", "kedd", "szerda", "csütörtök", "péntek", "szombat"],
+      "short": ["V", "H", "K", "Sze", "Cs", "P", "Szo"],
+      "narrow": ["V", "H", "K", "Sz", "Cs", "P", "Sz"]
+    }
+  },
+  "uz": {
+    "month": {
+      "long": {
+        "standalone": [
+          "Yanvar",
+          "Fevral",
+          "Mart",
+          "Aprel",
+          "May",
+          "Iyun",
+          "Iyul",
+          "Avgust",
+          "Sentabr",
+          "Oktabr",
+          "Noyabr",
+          "Dekabr"
+        ],
+        "format": [
+          "yanvar",
+          "fevral",
+          "mart",
+          "aprel",
+          "may",
+          "iyun",
+          "iyul",
+          "avgust",
+          "sentabr",
+          "oktabr",
+          "noyabr",
+          "dekabr"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "Yan",
+          "Fev",
+          "Mar",
+          "Apr",
+          "May",
+          "Iyn",
+          "Iyl",
+          "Avg",
+          "Sen",
+          "Okt",
+          "Noy",
+          "Dek"
+        ],
+        "format": [
+          "yan",
+          "fev",
+          "mar",
+          "apr",
+          "may",
+          "iyn",
+          "iyl",
+          "avg",
+          "sen",
+          "okt",
+          "noy",
+          "dek"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["yakshanba", "dushanba", "seshanba", "chorshanba", "payshanba", "juma", "shanba"],
+      "short": ["Yak", "Dush", "Sesh", "Chor", "Pay", "Jum", "Shan"],
+      "narrow": ["Y", "D", "S", "C", "P", "J", "S"]
+    }
+  },
+  "sr": {
+    "month": {
+      "long": {
+        "standalone": [
+          "јануар",
+          "фебруар",
+          "март",
+          "април",
+          "мај",
+          "јун",
+          "јул",
+          "август",
+          "септембар",
+          "октобар",
+          "новембар",
+          "децембар"
+        ],
+        "format": [
+          "јануар",
+          "фебруар",
+          "март",
+          "април",
+          "мај",
+          "јун",
+          "јул",
+          "август",
+          "септембар",
+          "октобар",
+          "новембар",
+          "децембар"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "јан",
+          "феб",
+          "мар",
+          "апр",
+          "мај",
+          "јун",
+          "јул",
+          "авг",
+          "сеп",
+          "окт",
+          "нов",
+          "дец"
+        ],
+        "format": [
+          "јан",
+          "феб",
+          "мар",
+          "апр",
+          "мај",
+          "јун",
+          "јул",
+          "авг",
+          "сеп",
+          "окт",
+          "нов",
+          "дец"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["недеља", "понедељак", "уторак", "среда", "четвртак", "петак", "субота"],
+      "short": ["нед", "пон", "уто", "сре", "чет", "пет", "суб"],
+      "narrow": ["н", "п", "у", "с", "ч", "п", "с"]
+    }
+  },
+  "tr": {
+    "month": {
+      "long": {
+        "standalone": [
+          "Ocak",
+          "Şubat",
+          "Mart",
+          "Nisan",
+          "Mayıs",
+          "Haziran",
+          "Temmuz",
+          "Ağustos",
+          "Eylül",
+          "Ekim",
+          "Kasım",
+          "Aralık"
+        ],
+        "format": [
+          "Ocak",
+          "Şubat",
+          "Mart",
+          "Nisan",
+          "Mayıs",
+          "Haziran",
+          "Temmuz",
+          "Ağustos",
+          "Eylül",
+          "Ekim",
+          "Kasım",
+          "Aralık"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "Oca",
+          "Şub",
+          "Mar",
+          "Nis",
+          "May",
+          "Haz",
+          "Tem",
+          "Ağu",
+          "Eyl",
+          "Eki",
+          "Kas",
+          "Ara"
+        ],
+        "format": [
+          "Oca",
+          "Şub",
+          "Mar",
+          "Nis",
+          "May",
+          "Haz",
+          "Tem",
+          "Ağu",
+          "Eyl",
+          "Eki",
+          "Kas",
+          "Ara"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"],
+      "short": ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"],
+      "narrow": ["P", "P", "S", "Ç", "P", "C", "C"]
+    }
+  },
+  "sk": {
+    "month": {
+      "long": {
+        "standalone": [
+          "január",
+          "február",
+          "marec",
+          "apríl",
+          "máj",
+          "jún",
+          "júl",
+          "august",
+          "september",
+          "október",
+          "november",
+          "december"
+        ],
+        "format": [
+          "januára",
+          "februára",
+          "marca",
+          "apríla",
+          "mája",
+          "júna",
+          "júla",
+          "augusta",
+          "septembra",
+          "októbra",
+          "novembra",
+          "decembra"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "jan",
+          "feb",
+          "mar",
+          "apr",
+          "máj",
+          "jún",
+          "júl",
+          "aug",
+          "sep",
+          "okt",
+          "nov",
+          "dec"
+        ],
+        "format": [
+          "jan",
+          "feb",
+          "mar",
+          "apr",
+          "máj",
+          "jún",
+          "júl",
+          "aug",
+          "sep",
+          "okt",
+          "nov",
+          "dec"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["nedeľa", "pondelok", "utorok", "streda", "štvrtok", "piatok", "sobota"],
+      "short": ["ne", "po", "ut", "st", "št", "pi", "so"],
+      "narrow": ["n", "p", "u", "s", "š", "p", "s"]
+    }
+  },
+  "nb": {
+    "month": {
+      "long": {
+        "standalone": [
+          "januar",
+          "februar",
+          "mars",
+          "april",
+          "mai",
+          "juni",
+          "juli",
+          "august",
+          "september",
+          "oktober",
+          "november",
+          "desember"
+        ],
+        "format": [
+          "januar",
+          "februar",
+          "mars",
+          "april",
+          "mai",
+          "juni",
+          "juli",
+          "august",
+          "september",
+          "oktober",
+          "november",
+          "desember"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "jan",
+          "feb",
+          "mar",
+          "apr",
+          "mai",
+          "jun",
+          "jul",
+          "aug",
+          "sep",
+          "okt",
+          "nov",
+          "des"
+        ],
+        "format": [
+          "jan.",
+          "feb.",
+          "mars",
+          "apr.",
+          "mai",
+          "juni",
+          "juli",
+          "aug.",
+          "sep.",
+          "okt.",
+          "nov.",
+          "des."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"],
+      "short": ["søn.", "man.", "tir.", "ons.", "tor.", "fre.", "lør."],
+      "narrow": ["S", "M", "T", "O", "T", "F", "L"]
+    }
+  },
+  "th": {
+    "month": {
+      "long": {
+        "standalone": [
+          "มกราคม",
+          "กุมภาพันธ์",
+          "มีนาคม",
+          "เมษายน",
+          "พฤษภาคม",
+          "มิถุนายน",
+          "กรกฎาคม",
+          "สิงหาคม",
+          "กันยายน",
+          "ตุลาคม",
+          "พฤศจิกายน",
+          "ธันวาคม"
+        ],
+        "format": [
+          "มกราคม",
+          "กุมภาพันธ์",
+          "มีนาคม",
+          "เมษายน",
+          "พฤษภาคม",
+          "มิถุนายน",
+          "กรกฎาคม",
+          "สิงหาคม",
+          "กันยายน",
+          "ตุลาคม",
+          "พฤศจิกายน",
+          "ธันวาคม"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "ม.ค.",
+          "ก.พ.",
+          "มี.ค.",
+          "เม.ย.",
+          "พ.ค.",
+          "มิ.ย.",
+          "ก.ค.",
+          "ส.ค.",
+          "ก.ย.",
+          "ต.ค.",
+          "พ.ย.",
+          "ธ.ค."
+        ],
+        "format": [
+          "ม.ค.",
+          "ก.พ.",
+          "มี.ค.",
+          "เม.ย.",
+          "พ.ค.",
+          "มิ.ย.",
+          "ก.ค.",
+          "ส.ค.",
+          "ก.ย.",
+          "ต.ค.",
+          "พ.ย.",
+          "ธ.ค."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์"],
+      "short": ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์"],
+      "narrow": ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส"]
+    }
+  },
+  "fr": {
+    "month": {
+      "long": {
+        "standalone": [
+          "janvier",
+          "février",
+          "mars",
+          "avril",
+          "mai",
+          "juin",
+          "juillet",
+          "août",
+          "septembre",
+          "octobre",
+          "novembre",
+          "décembre"
+        ],
+        "format": [
+          "janvier",
+          "février",
+          "mars",
+          "avril",
+          "mai",
+          "juin",
+          "juillet",
+          "août",
+          "septembre",
+          "octobre",
+          "novembre",
+          "décembre"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "janv.",
+          "févr.",
+          "mars",
+          "avr.",
+          "mai",
+          "juin",
+          "juil.",
+          "août",
+          "sept.",
+          "oct.",
+          "nov.",
+          "déc."
+        ],
+        "format": [
+          "janv.",
+          "févr.",
+          "mars",
+          "avr.",
+          "mai",
+          "juin",
+          "juil.",
+          "août",
+          "sept.",
+          "oct.",
+          "nov.",
+          "déc."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
+      "short": ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
+      "narrow": ["D", "L", "M", "M", "J", "V", "S"]
+    }
+  },
+  "ko": {
+    "month": {
+      "long": {
+        "standalone": [
+          "1월",
+          "2월",
+          "3월",
+          "4월",
+          "5월",
+          "6월",
+          "7월",
+          "8월",
+          "9월",
+          "10월",
+          "11월",
+          "12월"
+        ],
+        "format": [
+          "1월",
+          "2월",
+          "3월",
+          "4월",
+          "5월",
+          "6월",
+          "7월",
+          "8월",
+          "9월",
+          "10월",
+          "11월",
+          "12월"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "1월",
+          "2월",
+          "3월",
+          "4월",
+          "5월",
+          "6월",
+          "7월",
+          "8월",
+          "9월",
+          "10월",
+          "11월",
+          "12월"
+        ],
+        "format": [
+          "1월",
+          "2월",
+          "3월",
+          "4월",
+          "5월",
+          "6월",
+          "7월",
+          "8월",
+          "9월",
+          "10월",
+          "11월",
+          "12월"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+      "short": ["일", "월", "화", "수", "목", "금", "토"],
+      "narrow": ["일", "월", "화", "수", "목", "금", "토"]
+    }
+  },
+  "nl": {
+    "month": {
+      "long": {
+        "standalone": [
+          "januari",
+          "februari",
+          "maart",
+          "april",
+          "mei",
+          "juni",
+          "juli",
+          "augustus",
+          "september",
+          "oktober",
+          "november",
+          "december"
+        ],
+        "format": [
+          "januari",
+          "februari",
+          "maart",
+          "april",
+          "mei",
+          "juni",
+          "juli",
+          "augustus",
+          "september",
+          "oktober",
+          "november",
+          "december"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "jan",
+          "feb",
+          "mrt",
+          "apr",
+          "mei",
+          "jun",
+          "jul",
+          "aug",
+          "sep",
+          "okt",
+          "nov",
+          "dec"
+        ],
+        "format": [
+          "jan",
+          "feb",
+          "mrt",
+          "apr",
+          "mei",
+          "jun",
+          "jul",
+          "aug",
+          "sep",
+          "okt",
+          "nov",
+          "dec"
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"],
+      "short": ["zo", "ma", "di", "wo", "do", "vr", "za"],
+      "narrow": ["Z", "M", "D", "W", "D", "V", "Z"]
+    }
+  },
+  "da": {
+    "month": {
+      "long": {
+        "standalone": [
+          "januar",
+          "februar",
+          "marts",
+          "april",
+          "maj",
+          "juni",
+          "juli",
+          "august",
+          "september",
+          "oktober",
+          "november",
+          "december"
+        ],
+        "format": [
+          "januar",
+          "februar",
+          "marts",
+          "april",
+          "maj",
+          "juni",
+          "juli",
+          "august",
+          "september",
+          "oktober",
+          "november",
+          "december"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "jan.",
+          "feb.",
+          "mar.",
+          "apr.",
+          "maj",
+          "jun.",
+          "jul.",
+          "aug.",
+          "sep.",
+          "okt.",
+          "nov.",
+          "dec."
+        ],
+        "format": [
+          "jan.",
+          "feb.",
+          "mar.",
+          "apr.",
+          "maj",
+          "jun.",
+          "jul.",
+          "aug.",
+          "sep.",
+          "okt.",
+          "nov.",
+          "dec."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"],
+      "short": ["søn.", "man.", "tirs.", "ons.", "tors.", "fre.", "lør."],
+      "narrow": ["S", "M", "T", "O", "T", "F", "L"]
+    }
+  },
+  "kk": {
+    "month": {
+      "long": {
+        "standalone": [
+          "Қаңтар",
+          "Ақпан",
+          "Наурыз",
+          "Сәуір",
+          "Мамыр",
+          "Маусым",
+          "Шілде",
+          "Тамыз",
+          "Қыркүйек",
+          "Қазан",
+          "Қараша",
+          "Желтоқсан"
+        ],
+        "format": [
+          "қаңтар",
+          "ақпан",
+          "наурыз",
+          "сәуір",
+          "мамыр",
+          "маусым",
+          "шілде",
+          "тамыз",
+          "қыркүйек",
+          "қазан",
+          "қараша",
+          "желтоқсан"
+        ]
+      },
+      "short": {
+        "standalone": [
+          "қаң.",
+          "ақп.",
+          "нау.",
+          "сәу.",
+          "мам.",
+          "мау.",
+          "шіл.",
+          "там.",
+          "қыр.",
+          "қаз.",
+          "қар.",
+          "жел."
+        ],
+        "format": [
+          "қаң.",
+          "ақп.",
+          "нау.",
+          "сәу.",
+          "мам.",
+          "мау.",
+          "шіл.",
+          "там.",
+          "қыр.",
+          "қаз.",
+          "қар.",
+          "жел."
+        ]
+      }
+    },
+    "weekday": {
+      "long": ["жексенбі", "дүйсенбі", "сейсенбі", "сәрсенбі", "бейсенбі", "жұма", "сенбі"],
+      "short": ["жс", "дс", "сс", "ср", "бс", "жм", "сб"],
+      "narrow": ["Ж", "Д", "С", "С", "Б", "Ж", "С"]
     }
   }
 }

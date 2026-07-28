@@ -1,4 +1,4 @@
-import { writeFileSync } from "node:fs";
+import { writeFile } from "node:fs/promises";
 
 const locales = [
   "ar",
@@ -64,6 +64,6 @@ await Promise.all(
   }),
 );
 
-writeFileSync("data/locale-data.json", JSON.stringify(result, null, 2));
+await writeFile("data/locale-data.json", JSON.stringify(result, null, 2), "utf-8");
 
 console.log("done");
