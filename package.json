@@ -63,7 +63,7 @@
     "oxfmt": "^0.61.0",
     "oxlint": "^1.76.0",
     "oxlint-tsgolint": "^7.0.2001",
-    "srvx": "^0.12.4",
+    "srvx": "^0.12.5",
     "tsdown": "^0.22.14",
     "typescript": "^7.0.2",
     "vitest": "^4.1.10"
@@ -79,5 +79,5 @@
   "engines": {
     "node": "^22.22.0 || >=24"
   },
-  "packageManager": "pnpm@11.17.0"
+  "packageManager": "pnpm@11.18.0"
 }
