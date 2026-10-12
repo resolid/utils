@@ -49,24 +49,24 @@
     "get-locale-data": "node scripts/get-locale-data.js"
   },
   "dependencies": {
-    "nanoid": "^6.0.1"
+    "nanoid": "^6.0.2"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.1",
     "@changesets/cli": "^3.0.3",
     "@commitlint/cli": "^21.2.3",
     "@commitlint/config-conventional": "^21.2.3",
-    "@resolid/config": "^6.3.4",
-    "@types/node": "^24.19.0",
-    "@vitest/coverage-v8": "^5.0.2",
-    "lefthook": "^2.1.14",
-    "oxfmt": "^0.70.0",
-    "oxlint": "^1.85.0",
-    "oxlint-tsgolint": "^7.0.2003",
+    "@resolid/config": "^6.3.6",
+    "@types/node": "^24.19.2",
+    "@vitest/coverage-v8": "^5.0.3",
+    "lefthook": "^2.2.1",
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0",
+    "oxlint-tsgolint": "^7.0.2004",
     "srvx": "^1.0.5",
-    "tsdown": "^0.23.0",
+    "tsdown": "^0.23.1",
     "typescript": "^7.0.2",
-    "vitest": "^5.0.2"
+    "vitest": "^5.0.3"
   },
   "peerDependencies": {
     "undici": "^8.11.2"
@@ -79,5 +79,5 @@
   "engines": {
     "node": "^22.22.0 || >=24"
   },
-  "packageManager": "pnpm@12.6.0"
+  "packageManager": "pnpm@12.11.2"
 }
