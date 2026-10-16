@@ -1,5 +1,11 @@
 # @resolid/utils
 
+## 1.7.2
+
+### Patch Changes
+
+- [`2b8a20b`](https://github.com/resolid/utils/commit/2b8a20bee2a0186c8f6c19ece7ec307b9fcb0c14) - chore: update dependencies
+
 ## 1.7.1
 
 ### Patch Changes
