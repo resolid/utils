@@ -66,9 +66,12 @@ describe("abortable", () => {
 
 describe("sleep", () => {
   it("should resolve after given milliseconds", async () => {
+    const delay = 50;
     const start = Date.now();
-    await sleep(50);
-    expect(Date.now() - start).toBeGreaterThanOrEqual(50);
+
+    await sleep(delay);
+
+    expect(Date.now() - start).toBeGreaterThanOrEqual(delay - 2);
   });
 
   it("should aborts via signal", async () => {

@@ -56,20 +56,20 @@
     "@changesets/cli": "^3.0.3",
     "@commitlint/cli": "^21.2.3",
     "@commitlint/config-conventional": "^21.2.3",
-    "@resolid/config": "^6.3.6",
+    "@resolid/config": "^6.3.7",
     "@types/node": "^24.19.2",
-    "@vitest/coverage-v8": "^5.0.3",
-    "lefthook": "^2.2.1",
-    "oxfmt": "^0.72.0",
-    "oxlint": "^1.87.0",
+    "@vitest/coverage-v8": "^5.0.5",
+    "lefthook": "^2.2.2",
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0",
     "oxlint-tsgolint": "^7.0.2004",
     "srvx": "^1.0.5",
     "tsdown": "^0.23.1",
     "typescript": "^7.0.2",
-    "vitest": "^5.0.3"
+    "vitest": "^5.0.5"
   },
   "peerDependencies": {
-    "undici": "^8.11.2"
+    "undici": "^8.12.2"
   },
   "peerDependenciesMeta": {
     "undici": {
