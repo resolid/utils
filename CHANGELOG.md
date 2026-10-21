@@ -1,5 +1,15 @@
 # @resolid/utils
 
+## 1.7.3
+
+### Patch Changes
+
+- [`c041b85`](https://github.com/resolid/utils/commit/c041b857d015099af5f7bc46db6c1841d466ab14) - fix: fix oxlint error
+
+- [`0646fb0`](https://github.com/resolid/utils/commit/0646fb00bae3e183b1f167b449222e467ef50b9e) - feat: add password utils
+
+- [`ab6fa30`](https://github.com/resolid/utils/commit/ab6fa3083ead1a7a72c5c107791a3e76e18cafb4) - fix: remove node and undici type dependencies from http
+
 ## 1.7.2
 
 ### Patch Changes
