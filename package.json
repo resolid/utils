@@ -33,6 +33,18 @@
     "./http": {
       "types": "./dist/http.d.mts",
       "import": "./dist/http.mjs"
+    },
+    "./password": {
+      "workerd": {
+        "types": "./dist/password.node.mts",
+        "import": "./dist/password.node.mjs"
+      },
+      "node": {
+        "types": "./dist/password.node.mts",
+        "import": "./dist/password.node.mjs"
+      },
+      "types": "./dist/password.mts",
+      "import": "./dist/password.mjs"
     }
   },
   "publishConfig": {
@@ -49,21 +61,22 @@
     "get-locale-data": "node scripts/get-locale-data.js"
   },
   "dependencies": {
+    "@noble/hashes": "^2.4.0",
     "nanoid": "^6.0.2"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.1",
     "@changesets/cli": "^3.0.3",
-    "@commitlint/cli": "^21.2.3",
-    "@commitlint/config-conventional": "^21.2.3",
-    "@resolid/config": "^6.3.7",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@resolid/config": "^6.3.8",
     "@types/node": "^24.19.2",
     "@vitest/coverage-v8": "^5.0.5",
     "lefthook": "^2.2.2",
-    "oxfmt": "^0.73.0",
-    "oxlint": "^1.88.0",
+    "oxfmt": "^0.74.0",
+    "oxlint": "^1.89.0",
     "oxlint-tsgolint": "^7.0.2004",
-    "srvx": "^1.0.5",
+    "srvx": "^1.0.6",
     "tsdown": "^0.23.1",
     "typescript": "^7.0.2",
     "vitest": "^5.0.5"
@@ -79,5 +92,5 @@
   "engines": {
     "node": "^22.22.0 || >=24"
   },
-  "packageManager": "pnpm@12.11.2"
+  "packageManager": "pnpm@12.14.0"
 }
