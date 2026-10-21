@@ -24,7 +24,7 @@ const CAMEL_CASE_REGEX = /[-_\s]+(.)?/g;
  * @returns 驼峰命名格式的字符串
  */
 export function camelCase(str: string): string {
-  return str.trim().replace(CAMEL_CASE_REGEX, (_, c) => (c ? c.toUpperCase() : ""));
+  return str.trim().replaceAll(CAMEL_CASE_REGEX, (_, c) => (c ? c.toUpperCase() : ""));
 }
 
 const PASCAL_CASE_REGEX = /[A-Z]?[a-z]+|[A-Z]+(?![a-z])|[0-9]+/g;
