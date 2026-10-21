@@ -1,8 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { addHours } from "../lib/add-hours";
 import { diffInHours } from "../lib/diff-in-hours";
 
 describe("differenceInHours", () => {
+  beforeEach(() => {
+    vi.useFakeTimers({ now: new Date("2024-04-07T09:10:00.000Z") });
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   it("difference is 5 hours", () => {
     expect(diffInHours("2024-04-07T15:28:00.000Z", "2024-04-07T09:50:00.000Z")).toBe(5);
   });

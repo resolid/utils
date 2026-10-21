@@ -1,8 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { addMonths } from "../lib/add-months";
 import { diffInMonths } from "../lib/diff-in-months";
 
 describe("differenceInMonths", () => {
+  beforeEach(() => {
+    vi.useFakeTimers({ now: new Date("2024-04-07T09:10:00.000Z") });
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   it("should give 11 months", () => {
     expect(diffInMonths("2025-04-13", "2024-04-14")).toBe(11);
   });

@@ -1,7 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { hashPassword, verifyPassword } from "./index";
 
-describe("password (noble/scrypt)", () => {
+// Pure-JS scrypt is CPU-intensive and much slower on shared CI runners, so give
+// these tests more headroom than the 5s default.
+describe("password (noble/scrypt)", { timeout: 30_000 }, () => {
   it("hashPassword produces salt:hex format", async () => {
     const hash = await hashPassword("mypassword");
     const parts = hash.split(":");

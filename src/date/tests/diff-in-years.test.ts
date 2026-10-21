@@ -1,8 +1,16 @@
-import { describe, expect, it, suite } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, suite, vi } from "vitest";
 import { addYears } from "../lib/add-years";
 import { diffInYears } from "../lib/diff-in-years";
 
 describe("diffInYears", () => {
+  beforeEach(() => {
+    vi.useFakeTimers({ now: new Date("2024-04-07T09:10:00.000Z") });
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   it("returns the amount of full years between dates", () => {
     expect(diffInYears("2025-04-20", "2024-03-31")).toBe(1);
   });

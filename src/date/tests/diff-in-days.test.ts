@@ -1,8 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { subDays } from "../lib/add-days";
 import { diffInDays } from "../lib/diff-in-days";
 
 describe("diffInDays", () => {
+  beforeEach(() => {
+    vi.useFakeTimers({ now: new Date("2024-04-07T09:10:00.000Z") });
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   it("difference is 3 days", () => {
     expect(diffInDays("2024-04-10", "2024-04-07")).toBe(3);
   });
