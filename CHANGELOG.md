@@ -1,5 +1,11 @@
 # @resolid/utils
 
+## 1.7.3
+
+### Patch Changes
+
+- [`0646fb0`](https://github.com/resolid/utils/commit/0646fb00bae3e183b1f167b449222e467ef50b9e) - feat: add password utils
+
 ## 1.7.2
 
 ### Patch Changes
