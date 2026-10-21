@@ -1,4 +1,3 @@
-import type { Readable } from "node:stream";
 import type { MaybeArray } from "../../types";
 import { asArray } from "../../array";
 import {
@@ -27,19 +26,26 @@ export type InferResponseFormat<
   T = unknown,
 > = R extends keyof ResponseFormats ? ResponseFormats[R] : T;
 
+export type NodeReadableLike = AsyncIterable<Uint8Array> & {
+  pipe: (...args: never[]) => unknown;
+};
+
+export type DispatcherLike = {
+  dispatch: (...args: never[]) => boolean;
+};
+
 export type FetchOptions<R extends ResponseFormat = ResponseFormat, T = unknown> = Omit<
   RequestInit,
   "body"
 > &
   FetchHooks<T, R> & {
     baseUrl?: string;
-    body?: BodyInit | Readable | QueryObject[] | QueryObject | null;
+    body?: BodyInit | NodeReadableLike | QueryObject[] | QueryObject | null;
     query?: QueryObject;
     responseFormat?: R;
     parseResponse?: (responseText: string) => T;
     duplex?: "half" | undefined;
-    // oxlint-disable-next-line typescript/consistent-type-imports
-    dispatcher?: InstanceType<typeof import("undici").Dispatcher>;
+    dispatcher?: DispatcherLike;
   };
 
 type ResolvedFetchOptions<R extends ResponseFormat = ResponseFormat, T = unknown> = FetchOptions<
@@ -180,7 +186,7 @@ export function createFetch(globalOptions: CreateFetchOptions = {}): FetchInstan
         // oxlint-disable-next-line typescript/unbound-method
         isFunction((context.options.body as ReadableStream).pipeTo) ||
         // oxlint-disable-next-line typescript/unbound-method
-        isFunction((context.options.body as unknown as Readable).pipe)
+        isFunction((context.options.body as NodeReadableLike).pipe)
       ) {
         context.options.duplex ??= "half";
       }

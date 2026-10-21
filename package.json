@@ -45,7 +45,8 @@
       },
       "types": "./dist/password.mts",
       "import": "./dist/password.mjs"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "publishConfig": {
     "access": "public",
@@ -80,14 +81,6 @@
     "tsdown": "^0.23.1",
     "typescript": "^7.0.2",
     "vitest": "^5.0.5"
-  },
-  "peerDependencies": {
-    "undici": "^8.12.2"
-  },
-  "peerDependenciesMeta": {
-    "undici": {
-      "optional": true
-    }
   },
   "engines": {
     "node": "^22.22.0 || >=24"
