@@ -1,2 +1,2 @@
-export * from "./lib/fetch";
-export * from "./lib/url";
+export * from "./fetch";
+export * from "./url";
