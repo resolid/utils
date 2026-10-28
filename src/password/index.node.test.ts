@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import { hashPassword, verifyPassword } from "./index.node";
 
 describe("password (node:crypto)", () => {
@@ -58,6 +58,11 @@ describe("password (node:crypto)", () => {
     const [, key] = hash.split(":");
     const tampered = `${"0".repeat(32)}:${key}`;
     expect(await verifyPassword(tampered, "password")).toBe(false);
+  });
+
+  it("returns false for malformed hashes", async () => {
+    expect(await verifyPassword("", "password")).toBe(false);
+    expect(await verifyPassword("missing-separator", "password")).toBe(false);
   });
 
   it("handles special characters in password", async () => {

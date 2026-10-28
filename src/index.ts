@@ -8,6 +8,5 @@ export * from "./object";
 export * from "./string";
 export * from "./throttle";
 export * from "./device";
-export * from "./bytes";
-export * from "./hex";
+export * from "./encoding";
 export * from "./types";
