@@ -1,7 +1,7 @@
 import type { MaybeDateInput } from "../core/types";
 import { deviceTimezone } from "../../device";
 import { toDate } from "../core/to-date";
-import { secondsToOffset, type TimezoneToken } from "../core/utils";
+import { relativeTime, secondsToOffset, type TimezoneToken } from "../core/utils";
 
 /**
  * 计算两个时区在指定时间的偏移差
@@ -32,31 +32,8 @@ export function computeOffset(
   const fromTime = relativeTime(date, fromTimezone);
   const toTime = relativeTime(
     date,
-    /* istanbul ignore next -- @preserve */
     toTimezone === "device" ? (deviceTimezone() ?? "UTC") : toTimezone,
   );
 
   return secondsToOffset(Math.round((toTime.getTime() - fromTime.getTime()) / 1000), timezoneToken);
-}
-
-function relativeTime(d: Date, timezone: string): Date {
-  const parts = Object.fromEntries(
-    new Intl.DateTimeFormat("en-US", {
-      timeZone: timezone,
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hourCycle: "h23",
-    })
-      .formatToParts(d)
-      .filter(({ type }) => type !== "literal")
-      .map(({ type, value }) => [type, value]),
-  );
-
-  return new Date(
-    `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:${parts.second}Z`,
-  );
 }

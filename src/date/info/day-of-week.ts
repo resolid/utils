@@ -1,4 +1,4 @@
-import type { DateInput, WeekStartsOn } from "../core/types";
+import type { MaybeDateInput, WeekStartsOn } from "../core/types";
 import { toDate } from "../core/to-date";
 
 /**
@@ -9,6 +9,6 @@ import { toDate } from "../core/to-date";
  *
  * @returns 当周的第几天
  */
-export function dayOfWeek(input: DateInput, weekStartsOn: WeekStartsOn = 0): number {
+export function dayOfWeek(input: MaybeDateInput, weekStartsOn: WeekStartsOn = 0): number {
   return (toDate(input).getDay() - weekStartsOn + 7) % 7;
 }

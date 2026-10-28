@@ -10,7 +10,7 @@ import { inferOffsetLength, offsetToSeconds } from "../core/utils";
  *
  * @returns 加减偏移后的新时间
  */
-export function applyOffset(input: MaybeDateInput, offset: string): Date {
+export function applyOffset(input: MaybeDateInput, offset: string = "+00:00"): Date {
   const date = toDate(input);
   const length = inferOffsetLength(offset);
 

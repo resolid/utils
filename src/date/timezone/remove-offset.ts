@@ -9,7 +9,7 @@ import { applyOffset } from "./apply-offset";
  *
  * @returns 调整后的新时间
  */
-export function removeOffset(input: MaybeDateInput, offset: string): Date {
+export function removeOffset(input: MaybeDateInput, offset: string = "+00:00"): Date {
   const positive = offset.slice(0, 1) === "+";
 
   return applyOffset(input, offset.replace(positive ? "+" : "-", positive ? "-" : "+"));

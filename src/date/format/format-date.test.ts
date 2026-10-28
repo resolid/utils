@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { tzDate } from "../timezone/tz-date";
+import { fromZonedTime } from "../timezone/from-zoned-time";
 import { formatDate } from "./format-date";
 
 describe("formatDate", () => {
@@ -199,7 +199,7 @@ describe("format with a timezone", () => {
 
   it("can format a date with a timezone", () => {
     expect(
-      formatDate(tzDate("2022-10-29T11:30:50", "America/Los_Angeles"), "D HH:mm:ss", {
+      formatDate(fromZonedTime("2022-10-29T11:30:50Z", "America/Los_Angeles"), "D HH:mm:ss", {
         timezone: "Asia/Tokyo",
       }),
     ).toBe("30 03:30:50");

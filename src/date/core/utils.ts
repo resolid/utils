@@ -644,3 +644,34 @@ export function validateTokens(parts: PartToken[]): PartToken[] {
 
   return parts;
 }
+
+export function relativeTime(d: Date, timezone: string): Date {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-US", {
+      era: "short",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hourCycle: "h23",
+      timeZone: timezone,
+    })
+      .formatToParts(d)
+      .filter(({ type }) => type !== "literal")
+      .map(({ type, value }) => [type, value]),
+  );
+
+  const result = new Date(
+    Date.UTC(0, 0, 1, Number(parts.hour), Number(parts.minute), Number(parts.second)),
+  );
+
+  result.setUTCFullYear(
+    parts.era === "BC" ? 1 - Number(parts.year) : Number(parts.year),
+    Number(parts.month) - 1,
+    Number(parts.day),
+  );
+
+  return result;
+}

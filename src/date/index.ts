@@ -63,4 +63,4 @@ export * from "./range/sort-dates";
 export * from "./timezone/apply-offset";
 export * from "./timezone/compute-offset";
 export * from "./timezone/remove-offset";
-export * from "./timezone/tz-date";
+export * from "./timezone/from-zoned-time";
