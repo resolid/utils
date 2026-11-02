@@ -1,12 +1,11 @@
 export * from "./array";
 export * from "./file";
 export * from "./function";
-export * from "./promise";
 export * from "./is";
 export * from "./math";
 export * from "./object";
 export * from "./string";
-export * from "./throttle";
 export * from "./device";
 export * from "./encoding";
-export * from "./types";
+
+export type * from "./types";

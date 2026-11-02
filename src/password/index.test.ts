@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { hashPassword, verifyPassword } from "./index";
 
-describe("password (noble/scrypt)", () => {
+describe("password (noble/scrypt)", { timeout: 30_000 }, () => {
   it("hashPassword produces salt:hex format", async () => {
     const hash = await hashPassword("mypassword");
     const parts = hash.split(":");

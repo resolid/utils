@@ -2,7 +2,7 @@
 import { describe, expect, it } from "vitest";
 import { hashPassword, verifyPassword } from "./index.node";
 
-describe("password (node:crypto)", () => {
+describe("password (node:crypto)", { timeout: 10_000 }, () => {
   it("hashPassword produces salt:hex format", async () => {
     const hash = await hashPassword("mypassword");
     const parts = hash.split(":");

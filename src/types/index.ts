@@ -12,15 +12,10 @@ export type Dict<V> = Record<string, V>;
 
 export type Simplify<T> = { [K in keyof T]: T[K] } & {};
 
-export type ValueOrFunction<T, A extends unknown[] = []> = T | ((...args: A) => T);
+export type ValueOrFunction<A extends unknown[], R> = R | ((...args: A) => R);
 
 export type AtLeastOne<T> = {
   [K in keyof T]-?: Required<Pick<T, K>> & Partial<Omit<T, K>>;
 }[keyof T];
 
-export class TimeoutError extends Error {
-  override name = "TimeoutError";
-  constructor(message?: string) {
-    super(message ?? "Operation timed out");
-  }
-}
+export type LiteralString = "" | (string & Record<never, never>);

@@ -1,7 +1,7 @@
 import { Readable } from "node:stream";
 import { serve } from "srvx";
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
-import { retry, withTimeout } from "../../promise";
+import { retry, withTimeout } from "../../function/promise";
 import { parseQuery } from "../url";
 import { ufetch } from "./index";
 
@@ -321,14 +321,16 @@ describe("ufetch", () => {
 
   it("should abort request on timeout", async () => {
     const noTimeout = ufetch(getUrl("timeout")).catch(() => "no timeout");
-    const timeout = withTimeout(ufetch(getUrl("timeout")), 100).catch(() => "timeout");
+    const timeout = withTimeout((signal) => ufetch(getUrl("timeout"), { signal }), 100).catch(
+      () => "timeout",
+    );
     const race = await Promise.race([noTimeout, timeout]);
 
     expect(race).to.equal("timeout");
   });
 
   it("should preserve TimeoutError as cause when aborted by timeout", async () => {
-    await withTimeout(ufetch(getUrl("timeout")), 100).catch((error) => {
+    await withTimeout((signal) => ufetch(getUrl("timeout"), { signal }), 100).catch((error) => {
       expect(error.name).to.equal("TimeoutError");
     });
   });
