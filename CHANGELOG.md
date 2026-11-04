@@ -1,5 +1,41 @@
 # @resolid/utils
 
+## 2.0.0
+
+### Major Changes
+
+- [`7dd32df`](https://github.com/resolid/utils/commit/7dd32dfdec8bb8ae7d1ae6bd4ac94b8c32a33922) - feat(function)!: rework function utilities and split by feature
+
+  - add `once` and rename `runIf` to `resolveValue`
+  - make `withTimeout` accept a task function so a timeout can abort the task
+  - rework `debounce`/`throttle` around `edges`, `signal`, `flush` and `schedule`
+  - avoid unhandled rejection when `abortable` receives an already aborted signal
+
+  BREAKING CHANGE: `withTimeout` now takes `(signal) => Promise<T>` instead of
+  a `Promise<T>`. `runIf` is renamed to `resolveValue`, `ValueOrFunction` now
+  takes `<A, R>`, and `debounce`/`throttle` replace the `start`/`middle`/`once`
+  options with `edges` and `signal`.
+
+- [`dcae11d`](https://github.com/resolid/utils/commit/dcae11dc730a09ff44ccd1086d15d24b09de0825) - feat(array)!: rework array utilities and split by feature
+
+- [`c448bf5`](https://github.com/resolid/utils/commit/c448bf5486287cd436744eb363bac6b126b4b29a) - refactor(date)!: rename tzDate to fromZonedTime
+
+- [`bb0488b`](https://github.com/resolid/utils/commit/bb0488b9738a4fcdde9b60495a3c2a675991e3db) - feat(string)!: rework string utilities and split by feature
+
+  Add case, trim, escape and misc helpers.
+
+  BREAKING CHANGE: remove startsWith/endsWith and rename random to randomString.
+
+### Minor Changes
+
+- [`2460997`](https://github.com/resolid/utils/commit/2460997886281d195b5611ff801d9434b19bca4c) - fix(encoding): convert typed arrays using their underlying bytes
+
+- [`922cd0a`](https://github.com/resolid/utils/commit/922cd0a2bc515fb50322298dd6468a32441c3b4c) - feat(math): merge number utilities and export random helpers.
+
+### Patch Changes
+
+- [`4207b19`](https://github.com/resolid/utils/commit/4207b19045564c8bf3364aed0e53a3f585a7e4dc) - fix(types): accept PromiseLike in MaybePromise
+
 ## 1.7.3
 
 ### Patch Changes
