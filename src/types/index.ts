@@ -2,7 +2,7 @@ export type Booleanish = boolean | "true" | "false";
 
 export type MaybeArray<T> = T | T[];
 
-export type MaybePromise<T> = T | Promise<T>;
+export type MaybePromise<T> = T | PromiseLike<T>;
 
 export type AnyObject = Record<string, unknown>;
 
